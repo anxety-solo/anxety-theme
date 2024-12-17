@@ -352,8 +352,6 @@ input[type='range'],
 input[type='range']::-moz-range-track,
 input[type='range']::-moz-range-thumb {
   appearance: none;
-  transition: all ease 100ms;
-  height: var(--thumb-height);
 }
 
 input[type='range']::-moz-range-track {
@@ -369,12 +367,19 @@ input[type='range']::-moz-range-thumb {
   margin-top: calc((var(--track-height) / 2) - (var(--thumb-height) / 2)) !important;
 }
 
-input[type='range']:hover::-moz-range-thumb {
+input[type='range']::-moz-range-thumb,
+input[type='range']::-moz-range-progress {
+  filter: brightness(100%);
+}
+
+input[type='range']:hover::-moz-range-thumb,
+input[type='range']:active::-moz-range-progress {
   filter: brightness(var(--brightness-hover));
   cursor: grab;
 }
 
-input[type='range']:active::-moz-range-thumb {
+input[type='range']:active::-moz-range-thumb,
+input[type='range']:active::-moz-range-progress {
   filter: brightness(var(--brightness-down));
   cursor: grabbing;
 }
