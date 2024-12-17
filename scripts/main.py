@@ -6,7 +6,7 @@ import shutil
 import re
 import os
 
-section = ("ctp", "Anxety-Theme")
+section = ("ctp", "Anxety Theme")
 
 # Default accent colors
 accents: tuple[str] = (
@@ -47,7 +47,7 @@ def on_accent_change():
 def apply_theme():
     # Move css over
     if gr.__version__ >= '4.40.0':
-        source_css = os.path.join(script_path, f'flavors/gradio4/anxety.css')
+        source_css = os.path.join(script_path, f'flavors/gradio4/anxety-gr4.css')
     else: 
         source_css = os.path.join(script_path, f'flavors/anxety.css')
 
@@ -78,4 +78,4 @@ on_ui_settings(on_settings)
 
 # Print warning about potential display issues
 if gr.__version__ >= '4.40.0':
-    print(f"\033[32m[anxety-theme]\033[0m There may be display issues on Gradio 4 | \033[34mForge\033[0m")
+    print(f"\033[32m[anxety-theme]\033[0m There may be display issues on Gradio 4 | \033[34mForge UI\033[0m")
