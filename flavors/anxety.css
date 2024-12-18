@@ -129,6 +129,22 @@
   --button-secondary-text-color-hover: var(--button-secondary-text-color);
 }
 
+/* === Fluent DropDown === */
+.gradio-dropdown ul.options li.item.selected {
+  background-color: rgba(50, 60, 62, 0.75) !important;
+  backdrop-filter: blur(5px) !important;
+}
+.gradio-dropdown ul.options li.item:hover {
+  background-color: rgba(34, 40, 42, 0.75) !important; 
+  backdrop-filter: blur(3px) !important;
+}
+
+.gradio-dropdown ul.options  {
+  border: solid 2px var(--ctp-accent) !important;
+  background-color: rgba(0, 0, 0, 0.55) !important; 
+  backdrop-filter: blur(3px) !important;
+}
+
 /* === TagComplete === */
 .autocompleteResultsList > li:nth-child(odd) {
   background-color: var(--ctp-base1) !important;
@@ -154,7 +170,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--ctp-accent) !important;
 }
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
   background: var(--ctp-mantle);
   border-radius: 0px;
 }
@@ -257,10 +274,6 @@ input[type="number"]:not([step="any"])::-webkit-outer-spin-button {
 .dark .progressDiv,
 .progressDiv {
   background-color: var(--ctp-surface0);
-}
-
-.gradio-dropdown ul.options li.item.selected {
-  background-color: var(--ctp-surface0) !important;
 }
 
 .block.gradio-gallery {
