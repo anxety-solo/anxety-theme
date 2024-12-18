@@ -190,7 +190,7 @@
 /* OTHER */
 div.gradio-group>*:not(.absolute) {
   border-radius: 8px !important;
-  margin-bottom: 7px !important;
+  margin-bottom: 5px !important;
 }
 
 .block.token-counter span {
@@ -214,7 +214,8 @@ div.gradio-group>*:not(.absolute) {
   font-size: 13px;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
   border: transparent !important;
   cursor: pointer;
 }

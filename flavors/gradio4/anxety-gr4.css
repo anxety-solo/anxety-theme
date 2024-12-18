@@ -190,7 +190,7 @@
 /* OTHER */
 div.gradio-group>*:not(.absolute) {
   border-radius: 8px !important;
-  margin-bottom: 7px !important;
+  margin-bottom: 5px !important;
 }
 
 .block.token-counter span {
@@ -214,7 +214,8 @@ div.gradio-group>*:not(.absolute) {
   font-size: 13px;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
   border: transparent !important;
   cursor: pointer;
 }
@@ -277,7 +278,6 @@ input[type="number"]:not([step="any"])::-webkit-outer-spin-button {
   border-radius: var(--block-radius);
 }
 
-/* === SLIDERS STYLE === */
 /* === SLIDERS STYLE === */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -464,7 +464,5 @@ input[type='range'].svelte-pc1gm4:disabled::-moz-range-thumb {
   cursor: not-allowed;
 }
 
-/* all of the input range stuff is from this guy*/
-/* Shout out to them https://codepen.io/ShadowShahriar/pen/zYPPYrQ */
 /* all of the input range stuff is from this guy*/
 /* Shout out to them https://codepen.io/ShadowShahriar/pen/zYPPYrQ */
