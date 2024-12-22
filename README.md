@@ -2,6 +2,11 @@
     <h2>Dark Theme for Stable Diffusion WebUI | Gradio 3/4</h2>
 </div>
 
+### 🌟 Features:
+- Customization for the `TagComplete` extension.
+- A little Fluent DropDown.
+- Refined scrollbar.
+
 ### Extension
 
 1. Open WebUI

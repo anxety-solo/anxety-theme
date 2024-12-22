@@ -143,7 +143,7 @@
   box-shadow: 0 0 0 1px var(--ctp-accent);
   border: solid 2px transparent;
   background-color: rgba(0, 0, 0, 0.55) !important; 
-  backdrop-filter: blur(3px) !important;
+  backdrop-filter: blur(5px) grayscale(0.75) !important;
 }
 
 /* === ScrollBar === */
@@ -167,7 +167,7 @@
 /* === TagComplete === */
 .autocompleteResultsList > li:nth-child(odd) {
   background-color: var(--ctp-base1) !important;
-  transition: all 0.15s ease;
+  /* transition: all 0.15s ease; */
 }
 .autocompleteResultsList > li:nth-child(even) {
   background-color: var(--ctp-surface0) !important;
@@ -188,6 +188,7 @@
 .gradio-button.generate-box-interrupt:hover {
   background-color: var(--ctp-overlay0);
   color: var(--ctp-base);
+  filter: none !important;  /* overlight fix */
 }
 
 #txt2img_skip, #img2img_skip {
@@ -202,6 +203,19 @@
 .gradio-button.generate-box-interrupting:hover  {
   background-color: var(--ctp-peach);
   color: var(--ctp-base);
+}
+
+/* === Blurring BG images === */
+#modalImage,
+.modalControls {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+#modalImage {
+  backdrop-filter: blur(5px);
+}
+.modalControls:hover {
+  backdrop-filter: blur(25px) grayscale(1);
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 
