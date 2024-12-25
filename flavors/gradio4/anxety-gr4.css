@@ -1,7 +1,8 @@
 :root {
   /* ACCENT COLOR */
-  --ctp-anxety: #97718a;
-  
+  --ctp-anxety: #db88ae; /* OLD: #97718a; TEST: #f498c2 */
+  --ctp-errno: #ff6747;
+
   --ctp-rosewater: #f5e0dc;
   --ctp-flamingo: #f2cdcd;
   --ctp-pink: #f5c2e7;
@@ -16,7 +17,7 @@
   --ctp-sapphire: #74c7ec;
   --ctp-lavender: #b4befe;
   --ctp-blue: #89b4fa;
-  
+
   /* UI COLOR */
   --ctp-text: #d1d5d7;
   --ctp-subtext1: #d3dce0;
@@ -38,7 +39,7 @@
 
 :root,
 .dark {
-  --color-accent : var(--ctp-red);
+  --color-accent: var(--ctp-accent);
 
   --body-background-fill: var(--background-fill-primary);
   --body-text-color: var(--ctp-subtext0);
@@ -180,15 +181,15 @@
 /* === Gradio Button Color === */
 .gradio-button.generate-box-skip,
 .gradio-button.generate-box-interrupt  {
-  background-color: var(--ctp-overlay2);
+  background-color: var(--ctp-accent);
   color: var(--ctp-base);
   transition: all 0.1s ease;
 }
 .gradio-button.generate-box-skip:hover,
 .gradio-button.generate-box-interrupt:hover {
-  background-color: var(--ctp-overlay0);
+  background-color: var(--ctp-accent);
+  filter: brightness(70%) !important;
   color: var(--ctp-base);
-  filter: none !important; /* overlight fix */
 }
 
 #txt2img_skip, #img2img_skip {
@@ -196,26 +197,33 @@
 }
 
 .gradio-button.generate-box-interrupting  {
-  background-color: var(--ctp-peach);
+  background-color: var(--ctp-errno);
   color: var(--ctp-base);
   transition: all 0.1s ease;
 }
 .gradio-button.generate-box-interrupting:hover  {
-  background-color: var(--ctp-peach);
+  background-color: var(--ctp-errno);
   color: var(--ctp-base);
 }
 
-/* === Blurring BG images === */
-#modalImage,
-.modalControls {
-  background-color: rgba(0, 0, 0, 0) !important;
-}
-#modalImage {
-  backdrop-filter: blur(5px);
+/* === Preview Images BG === */
+#lightboxModal {
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
 }
 .modalControls:hover {
-  backdrop-filter: blur(25px) grayscale(1);
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(12px) grayscale(0.7);
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+/* Arrow */
+#lightboxModal .modalPrev,
+#lightboxModal .modalNext {
+  background-color: var(--ctp-base);
+}
+#lightboxModal .modalPrev:hover,
+#lightboxModal .modalNext:hover {
+  background-color: var(--ctp-accent);
 }
 
 
