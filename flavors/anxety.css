@@ -107,7 +107,7 @@
   --stat-background-fill: linear-gradient(to right, var(--primary-400), var(--primary-600));
   --table-border-color: var(--ctp-surface1);
   --table-even-background-fill: var(--ctp-base);
-  --table-odd-background-fill: var(--ctp-surface1);
+  --table-odd-background-fill: var(--ctp-base1);
   --table-row-focus: var(--color-accent-soft);
   --button-border-width: var(--input-border-width);
   --button-cancel-background-fill: var(--ctp-red);
