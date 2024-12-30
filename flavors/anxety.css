@@ -172,15 +172,19 @@
 
 /* === TagComplete === */
 .autocompleteResultsList > li:nth-child(odd) {
-  background-color: var(--ctp-base1) !important;
+  background-color: var(--ctp-base) !important;
   /* transition: all 0.15s ease; */
 }
 .autocompleteResultsList > li:nth-child(even) {
-  background-color: var(--ctp-surface0) !important;
+  background-color: var(--ctp-base1) !important;
 }
 .autocompleteResultsList > li:nth-child(even):hover,
 .autocompleteResultsList > li:nth-child(odd):hover {
   background-color: var(--ctp-surface1) !important;
+}
+/* Select Color*/
+.autocompleteResultsList > li.selected {
+  background-color: var(--ctp-surface0) !important; 
 }
 
 /* === Gradio Button Color === */
