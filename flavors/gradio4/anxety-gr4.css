@@ -164,6 +164,11 @@
   background: var(--ctp-mantle) !important;
   border-radius: 30px;
 }
+/* FireFox */ 
+:root, .dark {
+  scrollbar-width: auto;
+  scrollbar-color: var(--ctp-surface2) var(--ctp-mantle);
+}
 
 /* === TagComplete === */
 .autocompleteResultsList > li:nth-child(odd) {
