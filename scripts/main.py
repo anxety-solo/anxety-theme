@@ -75,7 +75,3 @@ def on_settings():
     apply_theme()
 
 on_ui_settings(on_settings)
-
-# Print warning about potential display issues
-if gr.__version__ >= '4.40.0':
-    print(f"\033[32m[anxety-theme]\033[0m There may be display issues on Gradio 4 | \033[34mForge UI\033[0m")

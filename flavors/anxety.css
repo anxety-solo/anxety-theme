@@ -87,6 +87,7 @@
   --checkbox-label-border-width: var(--input-border-width);
   --checkbox-label-text-color: var(--body-text-color);
   --checkbox-label-text-color-selected: var(--checkbox-label-text-color);
+  --chatbot-code-background-color: var(--ctp-surface0);
   --error-background-fill: var(--background-fill-primary);
   --error-border-color: var(--border-color-primary);
   --error-border-width: None;
@@ -197,7 +198,7 @@
 .gradio-button.generate-box-skip:hover,
 .gradio-button.generate-box-interrupt:hover {
   background-color: var(--ctp-accent);
-  filter: brightness(70%) !important;
+  filter: brightness(80%) !important;
   color: var(--ctp-base);
 }
 
@@ -236,12 +237,26 @@
 }
 
 
-/* OTHER */
-div.gradio-group>*:not(.absolute) {
-  border-radius: 8px !important;
-  margin-bottom: 5px !important;
+/* OTHER: NEW */
+.extra-network-pane .card, .standalone-card-preview.card {
+  transition: all 0.2s ease;
+}
+.extra-network-pane .card:hover {
+  box-shadow: 0 0 4px 0.2em var(--ctp-accent);
 }
 
+#tabs > .tab-nav > button.selected,
+#txt2img_extra_tabs > .tab-nav > button.selected,
+#img2img_extra_tabs > .tab-nav > button.selected,
+#mode_img2img > .tab-nav > button.selected {
+  color: var(--ctp-accent);
+}
+
+div.gradio-group>*:not(.absolute) {
+  margin-bottom: 2px;
+}
+
+/* OTHER: OLD */
 .block.token-counter span {
   box-shadow: None;
 }
@@ -288,15 +303,10 @@ input[type='number'] {
 }
 
 /*
-input[type="number"]:not([step="any"])::-webkit-inner-spin-button,
-input[type="number"]:not([step="any"])::-webkit-outer-spin-button {
-  transition: all 0.1s ease;
-}
-*/
-
 .gr-box>div>div>input.gr-text-input {
   width: 4em;
 }
+*/
 
 .progressDiv .progress {
   background: var(--ctp-accent);
