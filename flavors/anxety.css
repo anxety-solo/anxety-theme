@@ -274,10 +274,6 @@ div.gradio-group>*:not(.absolute) {
   background: var(--ctp-surface1);
 }
 
-.extra-network-thumbs .actions .name {
-  font-size: 13px;
-}
-
 input[type="checkbox"],
 input[type="radio"] {
   border: transparent !important;
@@ -296,17 +292,14 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 /* Firefox */
 input[type='number'] {
-  -moz-appearance: textfield;
+  -moz-appearance: textfield !important;
 }
 
-/*
-.gr-box>div>div>input.gr-text-input {
+.gr-box > div > div > input.gr-text-input {
   width: 4em;
 }
-*/
 
 .progressDiv .progress {
   background: var(--ctp-accent);
