@@ -1,6 +1,6 @@
 :root {
   /* ACCENT COLOR */
-  --ctp-anxety: #db88ae; /* OLD: #97718a; TEST: #f498c2 */
+  --ctp-anxety: #ed789a; /* OLD: #db88ae */
   --ctp-errno: #ff6747;
 
   --ctp-rosewater: #f5e0dc;
@@ -254,6 +254,20 @@
 
 div.gradio-group>*:not(.absolute) {
   margin-bottom: 2px;
+}
+
+#context-menu {
+  box-shadow: none;
+  border-color: var(--ctp-surface2);
+}
+
+.context-menu-items a {
+  background-color: var(--cpt-base1);
+}
+.context-menu-items a:hover {
+  color: white;
+  background-color: var(--ctp-surface0);
+  border-radius: 6px;
 }
 
 /* OTHER: OLD */
