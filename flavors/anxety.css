@@ -1,6 +1,6 @@
 :root {
   /* ACCENT COLOR */
-  --ctp-anxety: #ed789a; /* OLD: #db88ae */
+  --ctp-anxety: #db88ae; /* TEST: #ed789a */
   --ctp-errno: #ff6747;
 
   --ctp-rosewater: #f5e0dc;
@@ -238,11 +238,15 @@
 
 
 /* OTHER: NEW */
-.extra-network-pane .card, .standalone-card-preview.card {
-  transition: all 0.2s ease;
+.extra-network-pane .card {
+  transition: 0.4s ease;
+  text-align: center;
 }
 .extra-network-pane .card:hover {
   box-shadow: 0 0 4px 0.2em var(--ctp-accent);
+}
+.extra-network-pane .card .actions {
+  background: rgba(0, 0, 0, 0.85);
 }
 
 #tabs > .tab-nav > button.selected,
