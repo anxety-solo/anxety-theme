@@ -1,8 +1,8 @@
 :root {
   /* ACCENT COLOR */
-  --ctp-anxety: #ed789a; /* OLD: #db88ae */
+  --ctp-anxety: #db88ae;
   --ctp-errno: #ff6747;
-
+  
   --ctp-rosewater: #f5e0dc;
   --ctp-flamingo: #f2cdcd;
   --ctp-pink: #f5c2e7;
@@ -18,8 +18,10 @@
   --ctp-lavender: #b4befe;
   --ctp-blue: #89b4fa;
 
+  
   /* UI COLOR */
   --ctp-text: #d1d5d7;
+  --ctp-subtext2: #939a9c;
   --ctp-subtext1: #d3dce0;
   --ctp-subtext0: #bbc2c6;
   --ctp-overlay2: #9399b2;
@@ -28,13 +30,16 @@
   --ctp-surface2: #475254;
   --ctp-surface1: #3d4142;
   --ctp-surface0: #22282a;
-  --ctp-base: #131313;
+  --ctp-base2: #232323;
   --ctp-base1: #181818;
+  --ctp-base0: #131313;
+
   --ctp-mantle: #0b0b0b;
   --ctp-crust: #11111b;
   --shadow: #010409;
+
   --ctp-accent: var(--ctp-anxety);
-  color-scheme: dark;
+  /* color-scheme: dark; */
 }
 
 :root,
@@ -46,15 +51,16 @@
   --body-text-color-subdued: var(--ctp-subtext1);
   --color-accent-soft: var(--ctp-surface0);
   --background-fill-primary: var(--ctp-mantle);
-  --background-fill-secondary: var(--ctp-base);
+  --background-fill-secondary: var(--ctp-base0);
   --border-color-accent: var(--ctp-surface0);
+  --border-color-accent-subdued: var(--border-color-accent);
   --border-color-primary: var(--ctp-surface0);
   --link-text-color-active: var(--ctp-subtext0);
   --link-text-color: var(--ctp-subtext0);
   --link-text-color-hover: var(--ctp-accent);
   --link-text-color-visited: var(--ctp-subtext0);
-  --shadow-spread: 0px;
-  --block-background-fill: var(--ctp-mantle);
+  --shadow-spread: None;
+  --block-background-fill: var(--background-fill-primary);
   --block-border-color: var(--border-color-primary);
   --block-border-width: None;
   --block-info-text-color: var(--body-text-color-subdued);
@@ -80,18 +86,17 @@
   --checkbox-border-color-selected: transparent;
   --checkbox-border-width: var(--input-border-width);
   --checkbox-label-background-fill: var(--ctp-surface0);
-  --checkbox-label-background-fill-hover: var(--ctp-surface0);
-  --checkbox-label-background-fill-selected: var(--checkbox-label-background-fill);
+  --checkbox-label-background-fill-hover: var(--checkbox-label-background-fill);
+  --checkbox-label-background-fill-selected: var(--ctp-surface1);
   --checkbox-label-border-color: var(--border-color-primary);
   --checkbox-label-border-color-hover: var(--checkbox-label-border-color);
   --checkbox-label-border-width: var(--input-border-width);
   --checkbox-label-text-color: var(--body-text-color);
   --checkbox-label-text-color-selected: var(--checkbox-label-text-color);
-  --chatbot-code-background-color: var(--ctp-surface0);
   --error-background-fill: var(--background-fill-primary);
-  --error-border-color: var(--border-color-primary);
+  --error-border-color: var(--ctp-accent);
   --error-border-width: None;
-  --error-text-color: var(--ctp-red);
+  --error-text-color: var(--ctp-text);
   --error-icon-color: var(--ctp-accent);
   --input-background-fill: var(--ctp-base1);
   --input-background-fill-focus: var(--input-background-fill);
@@ -99,38 +104,44 @@
   --input-border-color: var(--border-color-primary);
   --input-border-color-focus: var(--ctp-surface1);
   --input-border-color-hover: var(--input-border-color);
-  --input-border-width: None;
+  --input-border-width: 1px;
   --input-placeholder-color: var(--ctp-surface1);
   --input-shadow: None;
   --input-shadow-focus: 0 0 0 var(--shadow-spread) var(--ctp-surface1), var(--shadow-inset);
   --loader-color: var(--ctp-accent);
-  --slider-color: None;
-  --stat-background-fill: linear-gradient(to right, var(--primary-400), var(--primary-600));
+  --slider-color: var(--ctp-accent);
+  --stat-background-fill: var(--ctp-surface1);
   --table-border-color: var(--ctp-surface1);
-  --table-even-background-fill: var(--ctp-base);
-  --table-odd-background-fill: var(--ctp-base1);
+  --table-even-background-fill: var(--ctp-base1);
+  --table-odd-background-fill: var(--ctp-base2);
   --table-row-focus: var(--color-accent-soft);
   --button-border-width: var(--input-border-width);
   --button-cancel-background-fill: var(--ctp-red);
-  --button-cancel-background-fill-hover: var(--ctp-red);
+  --button-cancel-background-fill-hover: var(--button-cancel-background-fill);
   --button-cancel-border-color: var(--ctp-red);
   --button-cancel-border-color-hover: var(--button-cancel-border-color);
-  --button-cancel-text-color: var(--ctp-base);
+  --button-cancel-text-color: var(--ctp-base0);
   --button-cancel-text-color-hover: var(--button-cancel-text-color);
   --button-primary-background-fill: var(--ctp-accent);
-  --button-primary-background-fill-hover: var(--ctp-accent);
+  --button-primary-background-fill-hover: var(--button-primary-background-fill);
   --button-primary-border-color: var(--ctp-accent);
   --button-primary-border-color-hover: var(--button-primary-border-color);
-  --button-primary-text-color: var(--ctp-base);
+  --button-primary-text-color: var(--ctp-base0);
   --button-primary-text-color-hover: var(--button-primary-text-color);
   --button-secondary-background-fill: var(--ctp-surface0);
-  --button-secondary-background-fill-hover: var(--ctp-surface0);
+  --button-secondary-background-fill-hover: var(--button-secondary-background-fill);
   --button-secondary-border-color: var(--ctp-surface0);
   --button-secondary-border-color-hover: var(--button-secondary-border-color);
   --button-secondary-text-color: var(--ctp-text);
   --button-secondary-text-color-hover: var(--button-secondary-text-color);
+  --chatbot-code-background-color: var(--background-fill-primary);
+  
+  /* Params */
+ /*  --checkbox-label-gap: 4px; */
 }
 
+
+/* Main customizations */
 /* === Fluent DropDown === */
 .gradio-dropdown ul.options li.item.selected {
   background-color: rgba(50, 60, 62, 0.75) !important;
@@ -173,7 +184,7 @@
 
 /* === TagComplete === */
 .autocompleteResultsList > li:nth-child(odd) {
-  background-color: var(--ctp-base) !important;
+  background-color: var(--ctp-base0) !important;
   /* transition: all 0.15s ease; */
 }
 .autocompleteResultsList > li:nth-child(even) {
@@ -192,28 +203,28 @@
 .gradio-button.generate-box-skip,
 .gradio-button.generate-box-interrupt  {
   background-color: var(--ctp-accent);
-  color: var(--ctp-base);
+  color: var(--ctp-base0);
   transition: all 0.1s ease;
 }
 .gradio-button.generate-box-skip:hover,
 .gradio-button.generate-box-interrupt:hover {
   background-color: var(--ctp-accent);
   filter: brightness(80%) !important;
-  color: var(--ctp-base);
+  color: var(--ctp-base0);
 }
 
 #txt2img_skip, #img2img_skip {
-  border-left: solid 1px var(--ctp-base); /* button border */
+  border-left: solid 1px var(--ctp-base0); /* button border */
 }
 
 .gradio-button.generate-box-interrupting  {
   background-color: var(--ctp-errno);
-  color: var(--ctp-base);
+  color: var(--ctp-base0);
   transition: all 0.1s ease;
 }
 .gradio-button.generate-box-interrupting:hover  {
   background-color: var(--ctp-errno);
-  color: var(--ctp-base);
+  color: var(--ctp-base0);
 }
 
 /* === Preview Images BG === */
@@ -229,7 +240,7 @@
 /* Arrow */
 #lightboxModal .modalPrev,
 #lightboxModal .modalNext {
-  background-color: var(--ctp-base);
+  background-color: var(--ctp-base0);
 }
 #lightboxModal .modalPrev:hover,
 #lightboxModal .modalNext:hover {
@@ -237,12 +248,26 @@
 }
 
 
-/* OTHER: NEW */
-.extra-network-pane .card, .standalone-card-preview.card {
-  transition: all 0.2s ease;
+/* Other customizations */
+/* NEW */
+.wrap, label {
+  border-radius: var(--radius-lg) !important; /* -> 8px */
+  gap: 4px !important;
+}
+
+/* OLD */
+.extra-network-pane .card {
+  transition: 0.4s ease;
+  text-align: center;
 }
 .extra-network-pane .card:hover {
-  box-shadow: 0 0 4px 0.2em var(--ctp-accent);
+  box-shadow: 0 0 5px 0.2em var(--ctp-accent);
+  transform: scale(1.025);
+}
+.extra-network-pane .card .actions {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  font-size: 10px;
 }
 
 #tabs > .tab-nav > button.selected,
@@ -252,7 +277,7 @@
   color: var(--ctp-accent);
 }
 
-div.gradio-group>*:not(.absolute) {
+div.gradio-group > *:not(.absolute) {
   margin-bottom: 2px;
 }
 
@@ -260,7 +285,6 @@ div.gradio-group>*:not(.absolute) {
   box-shadow: none;
   border-color: var(--ctp-surface2);
 }
-
 .context-menu-items a {
   background-color: var(--cpt-base1);
 }
@@ -270,7 +294,6 @@ div.gradio-group>*:not(.absolute) {
   border-radius: 6px;
 }
 
-/* OTHER: OLD */
 .block.token-counter span {
   box-shadow: None;
 }
@@ -280,26 +303,19 @@ div.gradio-group>*:not(.absolute) {
   filter: brightness(125%);
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
 ::-moz-selection { /* Code for Firefox */
   background: var(--ctp-surface1);
 }
-
 ::selection {
   background: var(--ctp-surface1);
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  border: transparent !important;
-  cursor: pointer;
-}
-
-input[type="checkbox"]:checked,
-input[type="checkbox"]:checked:hover,
-input[type="checkbox"]:checked:focus {
-  border-color: transparent !important;
-}
-
+/* Hide text-field arrows */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -339,6 +355,7 @@ input[type='number'] {
   border-color: var(--block-border-color);
   border-radius: var(--block-radius);
 }
+
 
 /* === SLIDERS STYLE === */
 input[type='range']::-ms-track {
