@@ -59,23 +59,23 @@
   --link-text-color: var(--ctp-subtext0);
   --link-text-color-hover: var(--ctp-accent);
   --link-text-color-visited: var(--ctp-subtext0);
-  --shadow-spread: None;
+  --shadow-spread: none;
   --block-background-fill: var(--background-fill-primary);
   --block-border-color: var(--border-color-primary);
-  --block-border-width: None;
+  --block-border-width: none;
   --block-info-text-color: var(--body-text-color-subdued);
   --block-label-background-fill: var(--background-fill-secondary);
   --block-label-border-color: var(--border-color-primary);
-  --block-label-border-width: None;
+  --block-label-border-width: none;
   --block-label-text-color: var(--ctp-text);
-  --block-shadow: None;
-  --block-title-background-fill: None;
-  --block-title-border-color: None;
-  --block-title-border-width: None;
+  --block-shadow: none;
+  --block-title-background-fill: none;
+  --block-title-border-color: none;
+  --block-title-border-width: none;
   --block-title-text-color: var(--ctp-text);
   --panel-background-fill: var(--background-fill-secondary);
   --panel-border-color: var(--border-color-primary);
-  --panel-border-width: None;
+  --panel-border-width: none;
   --checkbox-background-color: var(--ctp-surface1);
   --checkbox-background-color-focus: var(--checkbox-background-color);
   --checkbox-background-color-hover: var(--ctp-surface2);
@@ -95,7 +95,7 @@
   --checkbox-label-text-color-selected: var(--checkbox-label-text-color);
   --error-background-fill: var(--background-fill-primary);
   --error-border-color: var(--ctp-accent);
-  --error-border-width: None;
+  --error-border-width: none;
   --error-text-color: var(--ctp-text);
   --error-icon-color: var(--ctp-accent);
   --input-background-fill: var(--ctp-base1);
@@ -106,7 +106,7 @@
   --input-border-color-hover: var(--input-border-color);
   --input-border-width: 1px;
   --input-placeholder-color: var(--ctp-surface1);
-  --input-shadow: None;
+  --input-shadow: none;
   --input-shadow-focus: 0 0 0 var(--shadow-spread) var(--ctp-surface1), var(--shadow-inset);
   --loader-color: var(--ctp-accent);
   --slider-color: var(--ctp-accent);
@@ -295,7 +295,7 @@ div.gradio-group > *:not(.absolute) {
 }
 
 .block.token-counter span {
-  box-shadow: None;
+  box-shadow: none;
 }
 
 .gradio-button:hover,
