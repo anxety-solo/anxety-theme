@@ -251,7 +251,7 @@
 /* Other customizations */
 /* NEW */
 .wrap, label {
-  border-radius: var(--radius-lg) !important; /* -> 8px */
+  border-radius: 8px !important;
   gap: 4px !important;
 }
 
