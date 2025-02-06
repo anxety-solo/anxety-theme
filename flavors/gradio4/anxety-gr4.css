@@ -137,7 +137,6 @@
   --chatbot-code-background-color: var(--background-fill-primary);
   
   /* Params */
- /*  --checkbox-label-gap: 4px; */
 }
 
 
@@ -250,7 +249,7 @@
 
 /* Other customizations */
 /* NEW */
-.wrap, label {
+.wrap, label, .lg, .secondary, .gradio-button, .block {
   border-radius: 8px !important;
   gap: 4px !important;
 }
