@@ -252,13 +252,13 @@
 }
 
 
-/* Other customizations */
+/* Other Customizations */
 /* Rounded Button */
 .wrap, label, .block, .lg, .primary, .secondary, .gradio-button {
   border-radius: 8px !important;
 }
-.wrap, label,.block { gap: 4px !important; }
-/* Fix Rounded Main Button UI*/
+.wrap, label, .block { gap: 4px !important; }
+/* Fix Rounded Main Button UI */
 #txt2img_interrupt, #img2img_interrupt,
 #txt2img_interrupting, #img2img_interrupting {
   border-radius: 8px 0 0 8px!important; 
@@ -267,19 +267,28 @@
   border-radius: 0 8px 8px 0 !important;
 }
 
-/* OLD */
-.extra-network-pane .card {
-  transition: 0.2s ease;
+/* Extra-Network-Pane */
+.extra-network-pane .card,
+.extra-network-pane .card .button-row {
+  transition: all 0.2s ease;
   text-align: center;
 }
 .extra-network-pane .card:hover {
   box-shadow: 0 0 5px 0.2em var(--ctp-accent);
   transform: scale(1.025);
 }
-.extra-network-pane .card .actions {
+.extra-network-pane .card .button-row {
+  border-bottom-left-radius: 8px;
+  padding: 0 5px;
+}
+.extra-network-pane .card .actions,
+.extra-network-pane .card .button-row:hover {
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
   font-size: 10px;
+}
+.extra-network-pane .card .button-row > .card-button:hover {
+  color: var(--ctp-accent);
 }
 
 #tabs > .tab-nav > button.selected,
@@ -290,6 +299,8 @@
   color: var(--ctp-accent);
 }
 
+
+/* OLD */
 div.gradio-group > *:not(.absolute) {
   margin-bottom: 2px;
 }
@@ -339,12 +350,6 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield !important;
 }
-
-/*
-.gr-box > div > div > input.gr-text-input {
-  width: 4em;
-}
-*/
 
 .progressDiv .progress {
   background: var(--ctp-accent);
