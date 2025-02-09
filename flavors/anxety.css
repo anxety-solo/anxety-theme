@@ -35,7 +35,6 @@
   --ctp-base0: #131313;
 
   --ctp-mantle: #0b0b0b;
-  --ctp-crust: #11111b;
   --shadow: #010409;
 
   --ctp-accent: var(--ctp-anxety);
@@ -160,12 +159,13 @@
 
 /* === ScrollBar === */
 ::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.65rem;
+  height: 0.65rem;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--ctp-surface2) !important;
-  border-radius: 30px;
+  border-radius: 8px;
+  border: 3px solid var(--ctp-mantle);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--ctp-accent) !important;
@@ -173,7 +173,7 @@
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-corner {
   background: var(--ctp-mantle) !important;
-  border-radius: 30px;
+  border-radius: 8px;
 }
 /* FireFox */ 
 :root, .dark {
@@ -198,7 +198,7 @@
   background-color: var(--ctp-surface0) !important; 
 }
 
-/* === Gradio Button Color === */
+/* === Gradio (MAIN UI) Button === */
 .gradio-button.generate-box-skip,
 .gradio-button.generate-box-interrupt  {
   background-color: var(--ctp-accent);
@@ -212,6 +212,11 @@
   color: var(--ctp-base0);
 }
 
+#txt2img_skip, #img2img_skip,
+#txt2img_interrupt, #img2img_interrupt,
+#txt2img_interrupting, #img2img_interrupting {
+  border: none; 
+}
 #txt2img_skip, #img2img_skip {
   border-left: solid 1px var(--ctp-base0); /* button border */
 }
@@ -248,15 +253,23 @@
 
 
 /* Other customizations */
-/* NEW */
-.wrap, label, .lg, .secondary, .gradio-button, .block {
+/* Rounded Button */
+.wrap, label, .block, .lg, .primary, .secondary, .gradio-button {
   border-radius: 8px !important;
-  gap: 4px !important;
+}
+.wrap, label,.block { gap: 4px !important; }
+/* Fix Rounded Main Button UI*/
+#txt2img_interrupt, #img2img_interrupt,
+#txt2img_interrupting, #img2img_interrupting {
+  border-radius: 8px 0 0 8px!important; 
+}
+#txt2img_skip, #img2img_skip {
+  border-radius: 0 8px 8px 0 !important;
 }
 
 /* OLD */
 .extra-network-pane .card {
-  transition: 0.4s ease;
+  transition: 0.2s ease;
   text-align: center;
 }
 .extra-network-pane .card:hover {
@@ -272,7 +285,8 @@
 #tabs > .tab-nav > button.selected,
 #txt2img_extra_tabs > .tab-nav > button.selected,
 #img2img_extra_tabs > .tab-nav > button.selected,
-#mode_img2img > .tab-nav > button.selected {
+#mode_img2img > .tab-nav > button.selected,
+#tabs .gradio-tabs > .tab-nav > button.selected {
   color: var(--ctp-accent);
 }
 
@@ -326,9 +340,11 @@ input[type='number'] {
   -moz-appearance: textfield !important;
 }
 
+/*
 .gr-box > div > div > input.gr-text-input {
   width: 4em;
 }
+*/
 
 .progressDiv .progress {
   background: var(--ctp-accent);
