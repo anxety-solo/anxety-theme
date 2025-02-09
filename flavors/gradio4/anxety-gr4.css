@@ -330,6 +330,7 @@ div.gradio-group > *:not(.absolute) {
 input[type="checkbox"],
 input[type="radio"] {
   cursor: pointer;
+  accent-color: var(--ctp-accent);
 }
 
 ::-moz-selection { /* Code for Firefox */
