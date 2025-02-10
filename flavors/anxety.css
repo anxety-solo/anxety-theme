@@ -165,8 +165,11 @@ html {
 .toast-body {
   border-color:  var(--ctp-accent) !important;
   background-color: rgba(0, 0, 0, 0.65) !important;
-  backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(10px) !important;
   box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.05);
+}
+.toast-icon {
+  color: var(--ctp-errno) !important;
 }
 .timer {
   background: var(--ctp-accent) !important;
@@ -292,7 +295,7 @@ html {
 
 
 /* Other Customizations */
-/* Rounded Button */
+/* Rounded Gradio Button */
 .wrap, label, .block, .lg, .primary, .secondary, .gradio-button {
   border-radius: 8px !important;
 }
@@ -326,7 +329,9 @@ html {
   backdrop-filter: blur(6px);
   font-size: 10px;
 }
+.goto-civitbrowser.card-button:hover svg path,
 .extra-network-pane .card .button-row > .card-button:hover {
+  fill: var(--ctp-accent);
   color: var(--ctp-accent);
 }
 
