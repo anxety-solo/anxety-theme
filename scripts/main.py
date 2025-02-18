@@ -9,7 +9,7 @@ import os
 section = ("ctp", "Anxety Theme")
 
 # Default accent colors
-accents: tuple[str] = (
+accents = (
     "anxety",    # main
     "rosewater",
     "flamingo",
@@ -83,7 +83,7 @@ def on_settings():
         "accent_color",
         OptionInfo(
             default="anxety",
-            label="Accent",
+            label="Accent Color",
             component=gr.Radio,
             component_args={"choices": accents},
             onchange=on_accent_change,

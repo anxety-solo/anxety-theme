@@ -1,4 +1,7 @@
 /* === TagComplete === */
+.autocompleteResults {
+  border-color: var(--ctp-surface1) !important;
+}
 .autocompleteResultsList > li:nth-child(odd) {
   background-color: var(--ctp-base0) !important;
   /* transition: all 0.15s ease; */

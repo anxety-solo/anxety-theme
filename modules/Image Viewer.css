@@ -9,13 +9,13 @@
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
 }
 /* Arrow */
-#lightboxModal .modalControls,
+#lightboxModal .modalControls span,
 #lightboxModal .modalPrev,
 #lightboxModal .modalNext {
   background-color: var(--ctp-base0);
 }
-#lightboxModal .modalControls:hover
+#lightboxModal .modalControls span:hover
 #lightboxModal .modalPrev:hover,
-#lightboxModal .modalNext:hover,
+#lightboxModal .modalNext:hover {
   background-color: var(--ctp-accent);
 }
