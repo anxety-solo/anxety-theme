@@ -11,20 +11,12 @@ section = ("ctp", "Anxety Theme")
 # Default accent colors
 accents = (
     "anxety",    # main
-    "rosewater",
-    "flamingo",
     "pink",
-    "mauve",
     "red",
-    "maroon",
     "peach",
     "yellow",
     "green",
-    "teal",
-    "sky",
-    "blue",
-    "sapphire",
-    "lavender",
+    "blue"
 )
 
 script_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
