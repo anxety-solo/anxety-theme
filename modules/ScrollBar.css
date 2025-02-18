@@ -1,0 +1,23 @@
+/* === ScrollBar === */
+::-webkit-scrollbar {
+  width: 0.65rem;
+  height: 0.65rem;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ctp-surface2) !important;
+  border-radius: 8px;
+  border: 3px solid var(--ctp-mantle);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ctp-accent) !important;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: var(--ctp-mantle) !important;
+  border-radius: 8px;
+}
+/* FireFox */ 
+:root, .dark {
+  scrollbar-width: auto;
+  scrollbar-color: var(--ctp-surface2) var(--ctp-mantle);
+}

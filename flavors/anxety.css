@@ -147,105 +147,6 @@ html, body {
 
 
 /* Main customizations */
-/* === Fluent DropDown === */
-.gradio-dropdown ul.options li.item.selected {
-  background-color: rgba(50, 60, 62, 0.75) !important;
-  backdrop-filter: blur(5px) !important;
-}
-.gradio-dropdown ul.options li.item:hover {
-  background-color: rgba(34, 40, 42, 0.75) !important; 
-  backdrop-filter: blur(3px) !important;
-}
-
-.gradio-dropdown ul.options  {
-  box-shadow: 0 0 0 1px var(--ctp-accent);
-  border: solid 2px transparent;
-  background-color: rgba(0, 0, 0, 0.55) !important; 
-  backdrop-filter: blur(8px) grayscale(0.6) !important;
-}
-.gradio-dropdown ul {
-  margin-top: 8px;
-}
-
-/* === Fluent Toast Error === */
-.toast-body {
-  border-color:  var(--ctp-accent) !important;
-  background-color: rgba(0, 0, 0, 0.65) !important;
-  backdrop-filter: blur(10px) !important;
-  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.05);
-}
-.toast-icon {
-  color: var(--ctp-errno) !important;
-}
-.timer {
-  background: var(--ctp-accent) !important;
-  margin: 0.25em;
-  border-radius: 16px;
-}
-
-.toast-close {
-  color: var(--ctp-accent) !important;
-  position: relative;
-  cursor: pointer;
-}
-.toast-close::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-.toast-close:hover::before {
-  opacity: 1;
-}
-
-/* === ScrollBar === */
-::-webkit-scrollbar {
-  width: 0.65rem;
-  height: 0.65rem;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--ctp-surface2) !important;
-  border-radius: 8px;
-  border: 3px solid var(--ctp-mantle);
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--ctp-accent) !important;
-}
-::-webkit-scrollbar-track,
-::-webkit-scrollbar-corner {
-  background: var(--ctp-mantle) !important;
-  border-radius: 8px;
-}
-/* FireFox */ 
-:root, .dark {
-  scrollbar-width: auto;
-  scrollbar-color: var(--ctp-surface2) var(--ctp-mantle);
-}
-
-/* === TagComplete === */
-.autocompleteResultsList > li:nth-child(odd) {
-  background-color: var(--ctp-base0) !important;
-  /* transition: all 0.15s ease; */
-}
-.autocompleteResultsList > li:nth-child(even) {
-  background-color: var(--ctp-base1) !important;
-}
-.autocompleteResultsList > li:nth-child(even):hover,
-.autocompleteResultsList > li:nth-child(odd):hover {
-  background-color: var(--ctp-surface1) !important;
-}
-/* Select Color*/
-.autocompleteResultsList > li.selected {
-  background-color: var(--ctp-surface0) !important; 
-}
-
 /* === Gradio (MAIN UI) Button === */
 .gradio-button.generate-box-skip,
 .gradio-button.generate-box-interrupt  {
@@ -279,26 +180,6 @@ html, body {
   color: var(--ctp-base0);
 }
 
-/* === Preview Images BG === */
-#lightboxModal {
-  background-color: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(8px);
-}
-.modalControls:hover {
-  backdrop-filter: blur(12px) grayscale(0.7);
-  background-color: rgba(0, 0, 0, 0.8) !important;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
-}
-/* Arrow */
-#lightboxModal .modalPrev,
-#lightboxModal .modalNext {
-  background-color: var(--ctp-base0);
-}
-#lightboxModal .modalPrev:hover,
-#lightboxModal .modalNext:hover {
-  background-color: var(--ctp-accent);
-}
-
 
 /* Other Customizations */
 /* Rounded Gradio Button */
@@ -313,32 +194,6 @@ html, body {
 }
 #txt2img_skip, #img2img_skip {
   border-radius: 0 8px 8px 0 !important;
-}
-
-/* Extra-Network-Pane */
-.extra-network-pane .card,
-.extra-network-pane .card .button-row {
-  transition: all 0.2s ease;
-  text-align: center;
-}
-.extra-network-pane .card:hover {
-  box-shadow: 0 0 5px 0.2em var(--ctp-accent);
-  transform: scale(1.025);
-}
-.extra-network-pane .card .button-row {
-  border-bottom-left-radius: 8px;
-  padding: 0 5px;
-}
-.extra-network-pane .card .actions,
-.extra-network-pane .card .button-row:hover {
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px);
-  font-size: 10px;
-}
-.goto-civitbrowser.card-button:hover svg path,
-.extra-network-pane .card .button-row > .card-button:hover {
-  fill: var(--ctp-accent);
-  color: var(--ctp-accent);
 }
 
 #tabs > .tab-nav > button.selected,

@@ -1,0 +1,37 @@
+/* === Fluent Toast Error === */
+.toast-body {
+  border-color:  var(--ctp-accent) !important;
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.05);
+}
+.toast-icon {
+  color: var(--ctp-errno) !important;
+}
+.timer {
+  background: var(--ctp-accent) !important;
+  margin: 0.25em;
+  border-radius: 16px;
+}
+
+.toast-close {
+  color: var(--ctp-accent) !important;
+  position: relative;
+  cursor: pointer;
+}
+.toast-close::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.toast-close:hover::before {
+  opacity: 1;
+}

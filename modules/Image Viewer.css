@@ -1,0 +1,21 @@
+/* === Image Viewer === */
+#lightboxModal {
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+}
+.modalControls:hover {
+  backdrop-filter: blur(12px) grayscale(0.7);
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+/* Arrow */
+#lightboxModal .modalControls,
+#lightboxModal .modalPrev,
+#lightboxModal .modalNext {
+  background-color: var(--ctp-base0);
+}
+#lightboxModal .modalControls:hover
+#lightboxModal .modalPrev:hover,
+#lightboxModal .modalNext:hover,
+  background-color: var(--ctp-accent);
+}
