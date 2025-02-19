@@ -133,8 +133,13 @@
   --primary-600: var(--ctp-surface1);
 }
 
+/* HTML */ 
 html, body {
   background: var(--ctp-mantle);
+}
+
+a:hover {
+  color: var(--ctp-accent) !important;
 }
 
 
