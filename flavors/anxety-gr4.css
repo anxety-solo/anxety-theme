@@ -213,7 +213,7 @@ div.gradio-group > *:not(.absolute) {
   border-color: var(--ctp-surface2);
 }
 .context-menu-items a {
-  background-color: var(--cpt-base1);
+  background-color: var(--ctp-base1);
 }
 .context-menu-items a:hover {
   color: white;

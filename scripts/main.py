@@ -1,6 +1,8 @@
 from modules.script_callbacks import on_ui_settings
 from modules.shared import OptionInfo, opts
+from modules.scripts import basedir
 
+from pathlib import Path
 import gradio as gr
 import shutil
 import re
@@ -19,7 +21,7 @@ accents = (
     "blue"
 )
 
-script_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+script_path = Path(basedir())
 
 def get_module_names():
     """Get the list of modules from the modules folder"""

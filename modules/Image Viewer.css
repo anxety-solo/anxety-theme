@@ -14,7 +14,7 @@
 #lightboxModal .modalNext {
   background-color: var(--ctp-base0);
 }
-#lightboxModal .modalControls span:hover
+#lightboxModal .modalControls span:hover,
 #lightboxModal .modalPrev:hover,
 #lightboxModal .modalNext:hover {
   background-color: var(--ctp-accent);
