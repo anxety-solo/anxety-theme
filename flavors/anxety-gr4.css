@@ -30,7 +30,7 @@
   --shadow: #010409;
 
   --ctp-accent: var(--ctp-anxety);
-  /* color-scheme: dark; */
+  color-scheme: dark;
 }
 
 :root,
@@ -137,13 +137,17 @@
 html, body {
   background: var(--ctp-mantle);
 }
-
 a:hover {
   color: var(--ctp-accent) !important;
 }
 
 
 /* Main customizations */
+#txt2img_actions_column,
+#img2img_actions_column{
+  justify-content: space-between;
+}
+
 /* === Gradio (MAIN UI) Button === */
 .gradio-button.generate-box-skip,
 .gradio-button.generate-box-interrupt  {
@@ -193,6 +197,7 @@ a:hover {
   border-radius: 0 8px 8px 0 !important;
 }
 
+/* Tabs Navigation */
 #tabs > .tab-nav > button.selected,
 #txt2img_extra_tabs > .tab-nav > button.selected,
 #img2img_extra_tabs > .tab-nav > button.selected,
