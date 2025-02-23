@@ -135,7 +135,7 @@
 
 /* HTML */ 
 html, body {
-  background: var(--ctp-mantle);
+  background: var(--ctp-mantle) !important;
 }
 a:hover {
   color: var(--ctp-accent) !important;

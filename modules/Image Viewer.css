@@ -2,20 +2,24 @@
 #lightboxModal {
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
 }
 .modalControls:hover {
-  backdrop-filter: blur(12px) grayscale(0.7);
+  backdrop-filter: blur(15px) grayscale(0.7);
   background-color: rgba(0, 0, 0, 0.8) !important;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
 }
-/* Arrow */
-#lightboxModal .modalControls span,
+/* Elements */
 #lightboxModal .modalPrev,
 #lightboxModal .modalNext {
   background-color: var(--ctp-base0);
+  transition: all 0.2s ease;
 }
-#lightboxModal .modalControls span:hover,
 #lightboxModal .modalPrev:hover,
 #lightboxModal .modalNext:hover {
   background-color: var(--ctp-accent);
+  color: var(--ctp-base0) !important;
+}
+#lightboxModal .modalControls > span:hover {
+  color:  var(--ctp-accent);
 }
