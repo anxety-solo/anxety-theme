@@ -17,7 +17,9 @@
   border-radius: 8px;
 }
 /* FireFox */ 
-:root, .dark {
-  scrollbar-width: auto;
-  scrollbar-color: var(--ctp-surface2) var(--ctp-mantle);
+@-moz-document url-prefix() {
+  :root, .dark {
+    scrollbar-width: auto;
+    scrollbar-color: var(--ctp-surface2) var(--ctp-mantle);
+  }
 }
