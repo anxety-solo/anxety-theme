@@ -1,5 +1,5 @@
 from modules.script_callbacks import on_ui_settings
-from modules.shared import OptionInfo, opts
+from modules.shared import OptionInfo, opts, cmd_opts
 from modules.scripts import basedir
 
 from pathlib import Path
@@ -23,8 +23,24 @@ accents = (
 
 script_path = Path(basedir())
 
+# Colorful logging implementation
+class Logger:
+    @staticmethod
+    def error(message: str):
+        print(f"\033[31m[Anxety-Theme]: {message}\033[0m")
+
+    @staticmethod
+    def warning(message: str):
+        print(f"\033[33m[Anxety-Theme]: {message}\033[0m")
+
+    @staticmethod
+    def info(message: str):
+        print(f"\033[34m[Anxety-Theme]: {message}\033[0m")
+
+logger = Logger()
+
 def get_module_names():
-    """Get the list of modules from the modules folder"""
+    """Get list of available CSS modules from modules directory"""
     modules_dir = os.path.join(script_path, "modules")
     if os.path.exists(modules_dir):
         module_files = [f for f in os.listdir(modules_dir) 
@@ -33,12 +49,13 @@ def get_module_names():
     return []
 
 def on_accent_change():
-    """Updating the accent color in CSS"""
+    """Update accent color in CSS file"""
+    current_accent = getattr(opts, 'accent_color', 'anxety')
     with open(os.path.join(script_path, "style.css"), "r+") as file:
         pattern = re.compile(r"--ctp-accent:\s*(.*)")
         text = re.sub(
             pattern,
-            f"--ctp-accent: var(--ctp-{opts.accent_color});",
+            f"--ctp-accent: var(--ctp-{current_accent});",
             file.read(),
             count=1,
         )
@@ -47,21 +64,32 @@ def on_accent_change():
         file.truncate()
 
 def apply_theme():
-    """The main function of applying the topic"""
-    # Copy the basic CSS
+    """Main theme application logic"""
+    # Handle command line argument
+    if hasattr(cmd_opts, 'anxety') and cmd_opts.anxety:
+        arg_color = cmd_opts.anxety.lower()
+        if arg_color in accents:
+            opts.accent_color = arg_color
+            logger.info(f"Using command line accent color: {arg_color}")
+        else:
+            opts.accent_color = "anxety"
+            logger.warning(f"Invalid color '{cmd_opts.anxety}'. Defaulting to 'anxety'.")
+            logger.info(f"Available accent colors: {', '.join(accents)}")
+
+    # Copy base CSS template
     if gr.__version__ >= '4.40.0':
         source_css = os.path.join(script_path, 'flavors/anxety-gr4.css')
     else: 
         source_css = os.path.join(script_path, 'flavors/anxety.css')
     shutil.copy(source_css, os.path.join(script_path, 'style.css'))
 
-    # Applying the accent
+    # Apply accent color
     on_accent_change()
 
-    # Add active modules
+    # Append active modules
     modules_dir = os.path.join(script_path, "modules")
     active_modules = getattr(opts, "active_modules", [])
-    
+
     with open(os.path.join(script_path, 'style.css'), 'a') as main_css:
         for module_name in active_modules:
             module_path = os.path.join(modules_dir, f"{module_name}.css")
@@ -71,8 +99,8 @@ def apply_theme():
                     main_css.write(mod_file.read())
 
 def on_settings():
-    """Interface settings"""
-    # Set the accent color
+    """Create settings UI elements"""
+    # Accent color selector
     opts.add_option(
         "accent_color",
         OptionInfo(
@@ -86,7 +114,7 @@ def on_settings():
         ),
     )
 
-    # Customizing the modules
+    # Module selection
     module_names = get_module_names()
     opts.add_option(
         "active_modules",
@@ -101,7 +129,7 @@ def on_settings():
         )
     )
 
-    # Initial setup
+    # Initial theme setup
     apply_theme()
 
 on_ui_settings(on_settings)

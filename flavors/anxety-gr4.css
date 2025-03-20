@@ -2,7 +2,7 @@
   /* ACCENT COLOR */
   --ctp-anxety: #db88ae;
   --ctp-errno: #ff6747;
-  
+
   --ctp-pink: #d9b8b8;
   --ctp-red: #ff5252;
   --ctp-peach: #f6d992;
@@ -10,7 +10,7 @@
   --ctp-green: #77ab59;
   --ctp-blue: #6d90c8;
 
-  
+
   /* UI COLOR */
   --ctp-text: #d1d5d7;
   --ctp-subtext2: #939a9c;
@@ -126,7 +126,7 @@
   --button-secondary-text-color: var(--ctp-text);
   --button-secondary-text-color-hover: var(--button-secondary-text-color);
   --chatbot-code-background-color: var(--background-fill-primary);
-  
+
   /* Params */
   /* For HUB */
   --primary-400: var(--ctp-accent);
