@@ -128,9 +128,6 @@
   --chatbot-code-background-color: var(--background-fill-primary);
 
   /* Params */
-  /* For HUB */
-  --primary-400: var(--ctp-accent);
-  --primary-600: var(--ctp-surface1);
 }
 
 /* HTML */ 

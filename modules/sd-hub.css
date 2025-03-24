@@ -1,0 +1,29 @@
+/* === SD-HUB Extension === */
+/* This module removes 'eye-gouging' styles */
+
+/* Change Gradio Color to Accent */
+:root, .dark {
+  --primary-400: var(--ctp-accent);
+  --primary-500: var(--ctp-accent);
+  --primary-600: var(--ctp-surface1);
+}
+
+/* Main Tabs */
+#sdhub-tab *,
+#sdhub-tab *:hover {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Tab-Button */
+#sdhub-tab > .tab-nav > button.selected {
+  color: var(--ctp-mantle) !important;
+}
+
+#sdhub-tab > .tab-nav > button:not(.selected) {
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.05) !important;
+}
+#sdhub-tab > .tab-nav > button:not(.selected):hover {
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.15) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
