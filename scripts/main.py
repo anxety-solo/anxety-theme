@@ -28,10 +28,10 @@ def is_sd_ux():
     git_tag = launch_utils.git_tag()
     # Check for SD-UX version format (vX.X.X-XX-gXXXXXXXX)
     is_sdux = "-" in git_tag and git_tag[0] == "v" and git_tag.count("-") >= 2
-    # Exclude conflicts with Forge and reForge and Classic
-    not_forge = not git_tag.startswith(("f1", "f2"))
-    not_reforge = git_tag != "classic"
-    return is_sdux and not_forge and not_reforge
+    # # Exclude conflicts with Forge, reForge, Classic
+    # not_forge = not git_tag.startswith(("f1", "f2"))
+    # not_reforge = git_tag != "classic"
+    return is_sdux
 
 # Colorful logging implementation
 class Logger:
