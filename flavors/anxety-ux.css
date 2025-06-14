@@ -127,6 +127,7 @@
   --chatbot-code-background-color: var(--background-fill-primary);
 
   /* Params */
+  --ae-primary-color: var(--ctp-accent);
 }
 
 /* HTML */
@@ -139,39 +140,10 @@ a:hover {
 
 
 /* Main customizations */
-/* === Gradio (MAIN UI) Button === */
-.gradio-button.generate-box-skip,
-.gradio-button.generate-box-interrupt  {
-  background-color: var(--ctp-accent);
-  color: var(--ctp-base0);
-  transition: all 0.1s ease;
+.layout-footer,
+#sidebar_secondary_tabs {
+  display: none;
 }
-.gradio-button.generate-box-skip:hover,
-.gradio-button.generate-box-interrupt:hover {
-  background-color: var(--ctp-accent);
-  filter: brightness(80%) !important;
-  color: var(--ctp-base0);
-}
-
-#txt2img_skip, #img2img_skip,
-#txt2img_interrupt, #img2img_interrupt,
-#txt2img_interrupting, #img2img_interrupting {
-  border: none;
-}
-#txt2img_skip, #img2img_skip {
-  border-left: solid 1px var(--ctp-base0); /* button border */
-}
-
-.gradio-button.generate-box-interrupting  {
-  background-color: var(--ctp-errno);
-  color: var(--ctp-base0);
-  transition: all 0.1s ease;
-}
-.gradio-button.generate-box-interrupting:hover  {
-  background-color: var(--ctp-errno);
-  color: var(--ctp-base0);
-}
-
 
 /* Other Customizations */
 /* Rounded Gradio Button */
@@ -179,16 +151,7 @@ a:hover {
   border-radius: 8px !important;
 }
 .wrap, label, .block { gap: 4px !important; }
-/* Fix Rounded Main Button UI */
-#txt2img_interrupt, #img2img_interrupt,
-#txt2img_interrupting, #img2img_interrupting {
-  border-radius: 8px 0 0 8px!important;
-}
-#txt2img_skip, #img2img_skip {
-  border-radius: 0 8px 8px 0 !important;
-}
 
-/* Tabs Navigation */
 #tabs > .tab-nav > button.selected,
 #txt2img_extra_tabs > .tab-nav > button.selected,
 #img2img_extra_tabs > .tab-nav > button.selected,
@@ -278,6 +241,11 @@ input[type='number'] {
 
 
 /* === SLIDERS STYLE === */
+input[type='range'] {
+  background-color: var(--ctp-base2) !important;
+  border-color: transparent;
+}
+
 input[type='range']::-ms-track {
   background: transparent;
 }

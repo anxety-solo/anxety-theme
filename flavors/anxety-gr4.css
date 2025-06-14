@@ -10,7 +10,6 @@
   --ctp-green: #77ab59;
   --ctp-blue: #6d90c8;
 
-
   /* UI COLOR */
   --ctp-text: #d1d5d7;
   --ctp-subtext2: #939a9c;
@@ -130,7 +129,7 @@
   /* Params */
 }
 
-/* HTML */ 
+/* HTML */
 html, body {
   background: var(--ctp-mantle) !important;
 }
@@ -157,7 +156,7 @@ a:hover {
 #txt2img_skip, #img2img_skip,
 #txt2img_interrupt, #img2img_interrupt,
 #txt2img_interrupting, #img2img_interrupting {
-  border: none; 
+  border: none;
 }
 #txt2img_skip, #img2img_skip {
   border-left: solid 1px var(--ctp-base0); /* button border */
@@ -183,7 +182,7 @@ a:hover {
 /* Fix Rounded Main Button UI */
 #txt2img_interrupt, #img2img_interrupt,
 #txt2img_interrupting, #img2img_interrupting {
-  border-radius: 8px 0 0 8px!important; 
+  border-radius: 8px 0 0 8px!important;
 }
 #txt2img_skip, #img2img_skip {
   border-radius: 0 8px 8px 0 !important;

@@ -16,7 +16,7 @@
   background: var(--ctp-mantle) !important;
   border-radius: 8px;
 }
-/* FireFox */ 
+/* FireFox */
 @-moz-document url-prefix() {
   :root, .dark {
     scrollbar-width: auto;

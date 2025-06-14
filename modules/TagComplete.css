@@ -15,5 +15,5 @@
 }
 /* Select Color*/
 .autocompleteResultsList > li.selected {
-  background-color: var(--ctp-surface0) !important; 
+  background-color: var(--ctp-surface0) !important;
 }

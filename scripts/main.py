@@ -1,6 +1,7 @@
 from modules.script_callbacks import on_ui_settings
 from modules.shared import OptionInfo, opts, cmd_opts
 from modules.scripts import basedir
+from modules import launch_utils
 
 from pathlib import Path
 import gradio as gr
@@ -23,6 +24,15 @@ accents = (
 
 script_path = Path(basedir())
 
+def is_sd_ux():
+    git_tag = launch_utils.git_tag()
+    # Check for SD-UX version format (vX.X.X-XX-gXXXXXXXX)
+    is_sdux = "-" in git_tag and git_tag[0] == "v" and git_tag.count("-") >= 2
+    # Exclude conflicts with Forge and reForge and Classic
+    not_forge = not git_tag.startswith(("f1", "f2"))
+    not_reforge = git_tag != "classic"
+    return is_sdux and not_forge and not_reforge
+
 # Colorful logging implementation
 class Logger:
     @staticmethod
@@ -43,7 +53,7 @@ def get_module_names():
     """Get list of available CSS modules from modules directory"""
     modules_dir = os.path.join(script_path, "modules")
     if os.path.exists(modules_dir):
-        module_files = [f for f in os.listdir(modules_dir) 
+        module_files = [f for f in os.listdir(modules_dir)
                        if f.endswith(".css") and os.path.isfile(os.path.join(modules_dir, f))]
         return [os.path.splitext(f)[0] for f in module_files]
     return []
@@ -77,10 +87,13 @@ def apply_theme():
             logger.info(f"Available accent colors: {', '.join(accents)}")
 
     # Copy base CSS template
-    if gr.__version__ >= '4.40.0':
+    if is_sd_ux:
+        source_css = os.path.join(script_path, 'flavors/anxety-ux.css')
+    elif gr.__version__ >= '4.40.0':
         source_css = os.path.join(script_path, 'flavors/anxety-gr4.css')
-    else: 
+    else:
         source_css = os.path.join(script_path, 'flavors/anxety.css')
+
     shutil.copy(source_css, os.path.join(script_path, 'style.css'))
 
     # Apply accent color
