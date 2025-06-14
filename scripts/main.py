@@ -9,6 +9,13 @@ import shutil
 import re
 import os
 
+
+# Check git-tag UI | need to define SD-UX
+git_tag = launch_utils.git_tag()
+# Check for SD-UX version format (vX.X.X-XX-gXXXXXXXX)
+is_SD_UX = "-" in git_tag and git_tag[0] == "v" and git_tag.count("-") >= 2
+
+
 section = ("ctp", "Anxety Theme")
 
 # Default accent colors
@@ -23,15 +30,6 @@ accents = (
 )
 
 script_path = Path(basedir())
-
-def is_sd_ux():
-    git_tag = launch_utils.git_tag()
-    # Check for SD-UX version format (vX.X.X-XX-gXXXXXXXX)
-    is_sdux = "-" in git_tag and git_tag[0] == "v" and git_tag.count("-") >= 2
-    # # Exclude conflicts with Forge, reForge, Classic
-    # not_forge = not git_tag.startswith(("f1", "f2"))
-    # not_reforge = git_tag != "classic"
-    return is_sdux
 
 # Colorful logging implementation
 class Logger:
@@ -87,7 +85,7 @@ def apply_theme():
             logger.info(f"Available accent colors: {', '.join(accents)}")
 
     # Copy base CSS template
-    if is_sd_ux:
+    if is_SD_UX:
         source_css = os.path.join(script_path, 'flavors/anxety-ux.css')
     elif gr.__version__ >= '4.40.0':
         source_css = os.path.join(script_path, 'flavors/anxety-gr4.css')
