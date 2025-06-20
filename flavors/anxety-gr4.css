@@ -1,7 +1,7 @@
 :root {
   /* ACCENT COLOR */
   --ctp-anxety: #db88ae;
-  --ctp-errno: #ff6747;
+  --ctp-error: #ff6747;
 
   --ctp-pink: #d9b8b8;
   --ctp-red: #ff5252;
@@ -163,17 +163,23 @@ a:hover {
 }
 
 .gradio-button.generate-box-interrupting  {
-  background-color: var(--ctp-errno);
+  background-color: var(--ctp-error);
   color: var(--ctp-base0);
   transition: all 0.1s ease;
 }
 .gradio-button.generate-box-interrupting:hover  {
-  background-color: var(--ctp-errno);
+  background-color: var(--ctp-error);
   color: var(--ctp-base0);
 }
 
 
 /* Other Customizations */
+select:focus,
+input[type="search"]:focus {
+  outline: none !important;
+  border: 2px solid var(--ctp-surface1) !important;
+}
+
 /* Rounded Gradio Button */
 .wrap, label, .block, .lg, .primary, .secondary, .gradio-button {
   border-radius: 8px !important;

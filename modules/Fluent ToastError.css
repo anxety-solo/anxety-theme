@@ -6,7 +6,7 @@
   box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.05);
 }
 .toast-icon {
-  color: var(--ctp-errno) !important;
+  color: var(--ctp-error) !important;
 }
 .timer {
   background: var(--ctp-accent) !important;
