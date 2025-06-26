@@ -4,7 +4,7 @@
   backdrop-filter: blur(8px);
   transition: all 0.2s ease;
 }
-.modalControls:hover {
+.modalControls:hover:not(:has(.cursor)) {
   backdrop-filter: blur(15px) grayscale(0.7);
   background-color: rgba(0, 0, 0, 0.8) !important;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
