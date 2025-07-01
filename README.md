@@ -3,6 +3,11 @@
     <h3>Gradio 3/4 Compatible • Modular CSS System</h3>
 </div>
 
+
+<img width="auto" height="auto" src="https://raw.githubusercontent.com/anxety-solo/anxety-theme/main/.images/A1111.png"/>
+<img width="auto" height="auto" src="https://raw.githubusercontent.com/anxety-solo/anxety-theme/main/.images/SD-UX.png"/>
+
+
 ### 🛠 Installation
 1. Open WebUI
 2. Navigate to "Extensions" → "Install from URL"
