@@ -1,25 +1,127 @@
-/* === Extra-Network-Pane === */
-.extra-network-pane .card,
-.extra-network-pane .card .button-row {
-  transition: all 0.2s ease;
+/* === Modern Flat Card Design (Extra-Netwok-Pane) === */
+:root {
+  --at-blur: blur(10px);
+  --at-card-radius: 12px;
+  --at-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --at-card-hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.12), 0 0 0 2px var(--ctp-accent);
+  --at-button-row-bg: rgba(0, 0, 0, 0.7);
+  --at-button-row-blur: var(--at-blur);
+  --at-card-button-size: 32px;
+  --at-card-button-radius: 8px;
+  --at-card-button-bg: rgba(255, 255, 255, 0.15);
+  --at-card-button-hover-bg: rgba(255, 255, 255, 0.25);
+  --at-name-bg: rgba(0, 0, 0, 0.5);
+  --at-name-bg-blur: var(--at-blur);
+}
+
+/* === Base Card Styles === */
+.extra-network-pane .card {
+  position: relative;
+  padding: 0;
+  border-radius: var(--at-card-radius);
+  box-shadow: var(--at-card-shadow);
   text-align: center;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .extra-network-pane .card:hover {
-  box-shadow: 0 0 5px 0.2em var(--ctp-accent);
-  transform: scale(1.025);
+  box-shadow: var(--at-card-hover-shadow);
+  transform: translateY(-2px);
+  z-index: 10;
 }
+
+/* === Button Row Styles === */
 .extra-network-pane .card .button-row {
-  border-bottom-left-radius: 8px;
-  padding: 0 5px;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 12px 8px;
+  background-color: var(--at-button-row-bg);
+  border-radius: 0 0 var(--at-card-radius) var(--at-card-radius);
+  backdrop-filter: var(--at-button-row-blur);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  gap: 8px;
+  visibility: hidden;
+  /* transform: translateY(10px); */
+  transition: all 0.3s ease;
+  z-index: 2;
 }
-.extra-network-pane .card .actions,
-.extra-network-pane .card .button-row:hover {
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px);
-  font-size: 10px;
+
+.extra-network-pane .card:hover .button-row {
+  opacity: 1;
+  visibility: visible;
+  /* transform: translateY(0); */
 }
+
+/* === Card Button Styles === */
+.extra-network-pane .card .card-button {
+  display: flex;
+  width: var(--at-card-button-size);
+  height: var(--at-card-button-size);
+  background: var(--at-card-button-bg);
+  border-radius: var(--at-card-button-radius);
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: all 0.2s ease;
+}
+.extra-network-pane .card .card-button:hover {
+  background: var(--at-card-button-hover-bg);
+  transform: scale(1.1);
+}
+
+/* === Hover Icon Color Styles === */
 .goto-civitbrowser.card-button:hover svg path,
+.extra-network-pane .card .card-button:hover svg,
 .extra-network-pane .card .button-row > .card-button:hover {
   fill: var(--ctp-accent);
+  filter: drop-shadow(0 0 2px rgba(var(--ctp-accent-rgb), 0.5));
   color: var(--ctp-accent);
+}
+
+/* === Name/Title Block Styles === */
+.extra-network-pane .card .actions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  background: transparent;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.extra-network-pane .card .name {
+  padding: 4px 12px;
+  max-width: 100%;
+  color: white;
+  font-size: 14px;
+  background: var(--at-name-bg);
+  border-radius: 20px;
+  backdrop-filter: var(--at-name-bg-blur);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease;
+}
+.extra-network-pane .card .name:hover {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* === Utility Fixes === */
+.copy-path-button {
+  margin: 0 !important;
 }

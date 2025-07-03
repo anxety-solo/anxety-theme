@@ -16,7 +16,7 @@
 
 ### 🛠 Installation
 
-#### For A1111/Forge (Extension Method)
+#### For A1111/Forge/SD-UX (Extension Method)
 1. Open WebUI
 2. Navigate to "Extensions" → "Install from URL"
 3. Paste `https://github.com/anxety-solo/anxety-theme`
@@ -27,7 +27,7 @@
 #### For ComfyUI (Theme Import Method)
 1. Download the theme file → [`comfy-anxety.json`](https://github.com/anxety-solo/anxety-theme/blob/main/comfy-anxety.json)
 2. Open ComfyUI
-3. Settings: navigate to Appearance → "Color Pallete"
+3. Go to Settings → Appearance → "Color Pallete"
 4. Import `comfy-anxety.json`
 5. Done :3
 
