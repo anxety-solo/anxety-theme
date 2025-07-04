@@ -1,20 +1,18 @@
 /* === Fluent DropDown === */
 .gradio-dropdown ul.options li.item.selected {
-  background: rgba(50, 60, 62, 0.75) !important;
-  backdrop-filter: blur(5px) !important;
+  background: var(--ctp-surface1) !important;
 }
 .gradio-dropdown ul.options li.item:hover {
-  background: rgba(34, 40, 42, 0.75) !important;
-  backdrop-filter: blur(3px) !important;
+  background: var(--ctp-surface0) !important;
 }
 
 .gradio-dropdown ul.options {
-  background: rgba(0, 0, 0, 0.55) !important;
+  background: rgba(0, 0, 0, 0.6) !important;
   border: solid 2px transparent;
-  backdrop-filter: blur(8px) grayscale(0.6) !important;
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ctp-surface0), var(--ctp-accent) 80%) !important;
+  backdrop-filter: blur(10px) grayscale(0.6) !important;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ctp-surface0), var(--ctp-accent) 70%) !important;
 }
 .gradio-dropdown ul {
   margin-top: 8px;
-  margin-botton: 8px;
+  margin-bottom: 4px;
 }
