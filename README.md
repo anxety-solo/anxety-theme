@@ -32,4 +32,15 @@
 5. Done :3
 
 
+### 🎨 Theme Integration with Extensions
+
+The theme also **modifies the style and design** of several Stable Diffusion WebUI extensions, providing a consistent and visually appealing user experience throughout the interface. Specifically, it supports:
+
+- **SD-Hub**: The theme adapts its UI elements to match the overall dark aesthetic.
+  [GitHub - gutris1/sd-hub](https://github.com/gutris1/sd-hub)
+
+- **TagComplete**: The theme customizes its autocomplete dropdown and input styling to blend seamlessly with the dark theme environment.
+  [GitHub - DominikDoom/a1111-sd-webui-tagcomplete](https://github.com/DominikDoom/a1111-sd-webui-tagcomplete)
+
+
 <div align="center"> <h6>🖌 Based on <a href="https://github.com/catppuccin/stable-diffusion-webui">Catppuccin Theme</a> 🖌</h6> </div>
