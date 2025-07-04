@@ -35,15 +35,15 @@ script_path = Path(basedir())
 class Logger:
     @staticmethod
     def error(message: str):
-        print(f"\033[31m[Anxety-Theme]: {message}\033[0m")
+        print(f"\033[31m[Anxety-Theme]:\033[0m {message}")
 
     @staticmethod
     def warning(message: str):
-        print(f"\033[33m[Anxety-Theme]: {message}\033[0m")
+        print(f"\033[33m[Anxety-Theme]:\033[0m {message}")
 
     @staticmethod
     def info(message: str):
-        print(f"\033[34m[Anxety-Theme]: {message}\033[0m")
+        print(f"\033[34m[Anxety-Theme]:\033[0m {message}")
 
 logger = Logger()
 

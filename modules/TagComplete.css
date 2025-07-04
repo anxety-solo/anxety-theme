@@ -67,7 +67,6 @@
 .resultsFlexContainer {
   display: flex !important;
   padding: var(--at-tc-item-padding) calc(var(--at-tc-item-padding) / 2) !important;
-  color: var(--ctp-text) !important;
   border-radius: calc(var(--at-tc-border-radius) - 2px) !important;
   align-items: center !important;
   transition: all calc(var(--at-tc-transition-speed) - 0.05s) ease;
@@ -98,12 +97,11 @@
 /* Main tag text styling */
 .acListItem {
   flex-grow: 1 !important;
-  color: var(--ctp-text) !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
 }
 /* Highlight matching characters in search */
 .acListItem b {
-  color: var(--ctp-accent) !important;
+  /* color: var(--ctp-accent) !important; */
   font-weight: 700 !important;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
