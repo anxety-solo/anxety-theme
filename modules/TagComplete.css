@@ -1,19 +1,133 @@
-/* === TagComplete === */
-.autocompleteResults {
-  border-color: var(--ctp-surface1) !important;
+/* === TagComplete - Modern Styling === */
+
+:root {
+  /* Sizing */
+  --at-tc-width: 300px; /* Minimum width of dropdown */
+  --at-tc-item-padding: 8px; /* Padding for list items */
+  --at-tc-border-radius: 10px; /* Border radius for all rounded elements */
+
+  /* Effects */
+  --at-tc-blur: blur(50px); /* Backdrop blur amount */
+  --at-tc-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --at-tc-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* Animations */
+  --at-tc-transition-speed: 0.25s;
+  --at-tc-bezier: cubic-bezier(0.175, 0.85, 0.35, 1.1);
 }
-.autocompleteResultsList > li:nth-child(odd) {
-  background-color: var(--ctp-base0) !important;
-  /* transition: all 0.15s ease; */
-}
+
+/* Remove alternating background colors from list items */
+.autocompleteResultsList > li:nth-child(odd),
 .autocompleteResultsList > li:nth-child(even) {
-  background-color: var(--ctp-base1) !important;
+  background-color: transparent !important;
 }
-.autocompleteResultsList > li:nth-child(even):hover,
-.autocompleteResultsList > li:nth-child(odd):hover {
-  background-color: var(--ctp-surface1) !important;
+
+/* Main dropdown container styling */
+.autocompleteResults {
+  min-width: var(--at-tc-width) !important;
+  max-height: 100% !important;
+  background: var(--ctp-base) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  border-radius: var(--at-tc-border-radius) !important;
+  backdrop-filter: var(--at-tc-blur);
+  box-shadow: var(--at-tc-shadow) !important;
+  animation: scaleIn 0.2s cubic-bezier(0.3, 1, 0.3, 1) forwards;
+  z-index: 1000;
 }
-/* Select Color*/
+
+/* List container styling */
+.autocompleteResultsList {
+  margin: 0 !important;
+  padding: calc(var(--at-tc-item-padding) - 2px) 0 !important;
+  list-style: none !important;
+}
+
+/* Individual list item styling */
+.autocompleteResultsList li {
+  margin: 4px var(--at-tc-item-padding) !important;
+  padding: 0 var(--at-tc-item-padding) !important;
+  border: 1px solid var(--ctp-surface0) !important;
+  border-radius: var(--at-tc-border-radius) !important;
+  transition: all var(--at-tc-transition-speed) var(--at-tc-bezier);
+}
+
+/* Hover state for list items */
+.autocompleteResultsList li:hover {
+  background: var(--ctp-surface0) !important;
+  box-shadow: var(--at-tc-hover-shadow);
+}
+
+/* Selected item styling (keyboard navigation) */
 .autocompleteResultsList > li.selected {
-  background-color: var(--ctp-surface0) !important;
+  background: var(--ctp-surface1) !important;
+  box-shadow: inset 2px 0 0 var(--ctp-accent), var(--at-tc-hover-shadow) !important;
+  transform: translateX(2px);
+}
+
+/* Flex container for each result item */
+.resultsFlexContainer {
+  display: flex !important;
+  padding: var(--at-tc-item-padding) calc(var(--at-tc-item-padding) / 2) !important;
+  color: var(--ctp-text) !important;
+  border-radius: calc(var(--at-tc-border-radius) - 2px) !important;
+  align-items: center !important;
+  transition: all calc(var(--at-tc-transition-speed) - 0.05s) ease;
+}
+
+/* Wiki link icon styling */
+.acWikiLink {
+  display: flex !important;
+  margin-right: 12px;
+  width: 26px !important;
+  height: 26px !important;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: calc(var(--at-tc-border-radius) - 2px) !important;
+  color: var(--ctp-subtext0) !important;
+  text-decoration: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all var(--at-tc-transition-speed) ease;
+}
+/* Wiki link hover effects */
+.acWikiLink:hover {
+  background: var(--ctp-surface2) !important;
+  color: var(--ctp-accent) !important;
+  transform: scale(1.08) rotate(5deg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Main tag text styling */
+.acListItem {
+  flex-grow: 1 !important;
+  color: var(--ctp-text) !important;
+  font-weight: 600 !important;
+}
+/* Highlight matching characters in search */
+.acListItem b {
+  color: var(--ctp-accent) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Meta text (count) styling */
+.acMetaText {
+  color: var(--ctp-subtext1) !important;
+  transition: all var(--at-tc-transition-speed) ease;
+}
+
+/* Meta text hover state */
+li:hover .acMetaText {
+  color: var(--ctp-accent) !important;
+}
+
+/* Dropdown appear animation */
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }

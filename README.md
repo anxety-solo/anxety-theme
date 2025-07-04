@@ -6,11 +6,11 @@
 
 <div align="center">
     <h6>-> A1111/Forge <-</h6>
-    <img width="auto" height="auto" src="https://raw.githubusercontent.com/anxety-solo/anxety-theme/main/.images/A1111.png"/>
+    <img width="auto" height="auto" src="https://raw.githubusercontent.com/anxety-solo/anxety-theme/main/images/A1111.png"/>
     <h6>-> ComfyUI <-</h6>
-    <img width="auto" height="auto" src="https://raw.githubusercontent.com/anxety-solo/anxety-theme/main/.images/ComfyUI.png"/>
+    <img width="auto" height="auto" src="https://raw.githubusercontent.com/anxety-solo/anxety-theme/main/images/ComfyUI.png"/>
     <h6>-> SD-UX <-</h6>
-    <img width="auto" height="auto" src="https://raw.githubusercontent.com/anxety-solo/anxety-theme/main/.images/SD-UX.png"/>
+    <img width="auto" height="auto" src="https://raw.githubusercontent.com/anxety-solo/anxety-theme/main/images/SD-UX.png"/>
 </div>
 
 

@@ -1,31 +1,36 @@
-/* === Modern Flat Card Design (Extra-Netwok-Pane) === */
+/* === Modern Flat Card Design (Extra-Network-Pane) === */
 :root {
-  --at-blur: blur(10px);
-  --at-card-radius: 12px;
-  --at-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --at-card-hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.12), 0 0 0 2px var(--ctp-accent);
-  --at-button-row-bg: rgba(0, 0, 0, 0.7);
-  --at-button-row-blur: var(--at-blur);
-  --at-card-button-size: 32px;
-  --at-card-button-radius: 8px;
-  --at-card-button-bg: rgba(255, 255, 255, 0.15);
-  --at-card-button-hover-bg: rgba(255, 255, 255, 0.25);
-  --at-name-bg: rgba(0, 0, 0, 0.5);
-  --at-name-bg-blur: var(--at-blur);
+  /* Effects */
+  --at-enp-blur: blur(10px);
+  --at-enp-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --at-enp-card-hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.12), 0 0 0 2px var(--ctp-accent);
+
+  /* Card-Button */
+  --at-enp-card-radius: 12px;
+  --at-enp-button-row-bg: rgba(0, 0, 0, 0.7);
+  --at-enp-button-row-blur: var(--at-enp-blur);
+
+  /* Card Button Styles */
+  --at-enp-card-button-size: 32px;
+  --at-enp-card-button-radius: 8px;
+  --at-enp-card-button-bg: rgba(255, 255, 255, 0.15);
+  --at-enp-card-button-hover-bg: rgba(255, 255, 255, 0.25);
+  --at-enp-name-bg: rgba(0, 0, 0, 0.5);
+  --at-enp-name-bg-blur: var(--at-enp-blur);
 }
 
-/* === Base Card Styles === */
+/* --- Base Card Styles --- */
 .extra-network-pane .card {
   position: relative;
   padding: 0;
-  border-radius: var(--at-card-radius);
-  box-shadow: var(--at-card-shadow);
+  border-radius: var(--at-enp-card-radius);
+  box-shadow: var(--at-enp-card-shadow);
   text-align: center;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .extra-network-pane .card:hover {
-  box-shadow: var(--at-card-hover-shadow);
+  box-shadow: var(--at-enp-card-hover-shadow);
   transform: translateY(-2px);
   z-index: 10;
 }
@@ -38,9 +43,9 @@
   bottom: 0;
   left: 0;
   padding: 12px 8px;
-  background-color: var(--at-button-row-bg);
-  border-radius: 0 0 var(--at-card-radius) var(--at-card-radius);
-  backdrop-filter: var(--at-button-row-blur);
+  background-color: var(--at-enp-button-row-bg);
+  border-radius: 0 0 var(--at-enp-card-radius) var(--at-enp-card-radius);
+  backdrop-filter: var(--at-enp-button-row-blur);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
   justify-content: center;
   align-items: center;
@@ -58,24 +63,24 @@
   /* transform: translateY(0); */
 }
 
-/* === Card Button Styles === */
+/* --- Card Button Styles --- */
 .extra-network-pane .card .card-button {
   display: flex;
-  width: var(--at-card-button-size);
-  height: var(--at-card-button-size);
-  background: var(--at-card-button-bg);
-  border-radius: var(--at-card-button-radius);
+  width: var(--at-enp-card-button-size);
+  height: var(--at-enp-card-button-size);
+  background: var(--at-enp-card-button-bg);
+  border-radius: var(--at-enp-card-button-radius);
   align-items: center;
   justify-content: center;
   margin: 0;
   transition: all 0.2s ease;
 }
 .extra-network-pane .card .card-button:hover {
-  background: var(--at-card-button-hover-bg);
+  background: var(--at-enp-card-button-hover-bg);
   transform: scale(1.1);
 }
 
-/* === Hover Icon Color Styles === */
+/* --- Hover Icon Color Styles --- */
 .goto-civitbrowser.card-button:hover svg path,
 .extra-network-pane .card .card-button:hover svg,
 .extra-network-pane .card .button-row > .card-button:hover {
@@ -84,7 +89,7 @@
   color: var(--ctp-accent);
 }
 
-/* === Name/Title Block Styles === */
+/* --- Name/Title Block Styles --- */
 .extra-network-pane .card .actions {
   position: absolute;
   display: flex;
@@ -104,9 +109,9 @@
   max-width: 100%;
   color: white;
   font-size: 14px;
-  background: var(--at-name-bg);
+  background: var(--at-enp-name-bg);
   border-radius: 20px;
-  backdrop-filter: var(--at-name-bg-blur);
+  backdrop-filter: var(--at-enp-name-bg-blur);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   letter-spacing: 0.3px;
   white-space: nowrap;
@@ -121,7 +126,7 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* === Utility Fixes === */
+/* --- Utility Fixes --- */
 .copy-path-button {
   margin: 0 !important;
 }
