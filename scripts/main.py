@@ -9,17 +9,10 @@ import shutil
 import re
 import os
 
-
-# Check git-tag UI | need to define SD-UX
-git_tag = launch_utils.git_tag()
-# Check for SD-UX version format (vX.X.X-XX-gXXXXXXXX)
-is_SD_UX = "-" in git_tag and git_tag[0] == "v" and git_tag.count("-") >= 2
-
-
+# --- CONSTANTS ---
 section = ("ctp", "Anxety Theme")
 
-# Default accent colors
-accents = (
+ACCENTS = (
     "anxety",    # main
     "pink",
     "red",
@@ -28,38 +21,48 @@ accents = (
     "green",
     "blue"
 )
+SCRIPT_PATH = Path(basedir())
+MODULES_DIR = SCRIPT_PATH / "modules"
+STYLE_CSS = SCRIPT_PATH / "style.css"
 
-script_path = Path(basedir())
-
-# Colorful logging implementation
+# --- LOGGER ---
 class Logger:
     @staticmethod
     def error(message: str):
-        print(f"\033[31m[Anxety-Theme]:\033[0m {message}")
+        print(f"\033[31m[Anxety-Theme]:\033[0m {message}", flush=True)
 
     @staticmethod
     def warning(message: str):
-        print(f"\033[33m[Anxety-Theme]:\033[0m {message}")
+        print(f"\033[33m[Anxety-Theme]:\033[0m {message}", flush=True)
 
     @staticmethod
     def info(message: str):
-        print(f"\033[34m[Anxety-Theme]:\033[0m {message}")
+        print(f"\033[34m[Anxety-Theme]:\033[0m {message}", flush=True)
 
 logger = Logger()
 
+# --- UTILS ---
 def get_module_names():
-    """Get list of available CSS modules from modules directory"""
-    modules_dir = os.path.join(script_path, "modules")
-    if os.path.exists(modules_dir):
-        module_files = [f for f in os.listdir(modules_dir)
-                       if f.endswith(".css") and os.path.isfile(os.path.join(modules_dir, f))]
-        return [os.path.splitext(f)[0] for f in module_files]
+    """Return a list of available module names (CSS files) in the modules directory."""
+    if MODULES_DIR.exists():
+        return [f.stem for f in MODULES_DIR.glob("*.css") if f.is_file()]
     return []
 
-def on_accent_change():
-    """Update accent color in CSS file"""
-    current_accent = getattr(opts, 'accent_color', 'anxety')
-    with open(os.path.join(script_path, "style.css"), "r+") as file:
+def select_base_css():
+    """Select and return the appropriate base CSS file path."""
+    git_tag = launch_utils.git_tag()
+    is_sd_ux = "-" in git_tag and git_tag[0] == "v" and git_tag.count("-") >= 2
+    if is_sd_ux:
+        return SCRIPT_PATH / 'flavors/anxety-ux.css'
+    elif gr.__version__ >= '4.40.0':
+        return SCRIPT_PATH / 'flavors/anxety-gr4.css'
+    else:
+        return SCRIPT_PATH / 'flavors/anxety.css'
+
+def update_accent_in_css():
+    """Update the accent color variable in the main CSS file."""
+    current_accent = getattr(opts, 'at_accent_color', 'anxety')
+    with open(STYLE_CSS, "r+") as file:
         pattern = re.compile(r"--ctp-accent:\s*(.*)")
         text = re.sub(
             pattern,
@@ -71,55 +74,46 @@ def on_accent_change():
         file.write(text)
         file.truncate()
 
-def apply_theme():
-    """Main theme application logic"""
-    # Handle command line argument
-    if hasattr(cmd_opts, 'anxety') and cmd_opts.anxety:
-        arg_color = cmd_opts.anxety.lower()
-        if arg_color in accents:
-            opts.accent_color = arg_color
-            logger.info(f"Using command line accent color: {arg_color}")
-        else:
-            opts.accent_color = "anxety"
-            logger.warning(f"Invalid color '{cmd_opts.anxety}'. Defaulting to 'anxety'.")
-            logger.info(f"Available accent colors: {', '.join(accents)}")
-
-    # Copy base CSS template
-    if is_SD_UX:
-        source_css = os.path.join(script_path, 'flavors/anxety-ux.css')
-    elif gr.__version__ >= '4.40.0':
-        source_css = os.path.join(script_path, 'flavors/anxety-gr4.css')
-    else:
-        source_css = os.path.join(script_path, 'flavors/anxety.css')
-
-    shutil.copy(source_css, os.path.join(script_path, 'style.css'))
-
-    # Apply accent color
-    on_accent_change()
-
-    # Append active modules
-    modules_dir = os.path.join(script_path, "modules")
-    active_modules = getattr(opts, "active_modules", [])
-
-    with open(os.path.join(script_path, 'style.css'), 'a') as main_css:
+def append_active_modules():
+    """Append the CSS of all active modules to the main style file."""
+    active_modules = getattr(opts, "at_active_modules", [])
+    with open(STYLE_CSS, 'a') as main_css:
         for module_name in active_modules:
-            module_path = os.path.join(modules_dir, f"{module_name}.css")
-            if os.path.isfile(module_path):
+            module_path = MODULES_DIR / f"{module_name}.css"
+            if module_path.is_file():
                 main_css.write(f"\n\n/* Module: {module_name} */\n")
                 with open(module_path, 'r') as mod_file:
                     main_css.write(mod_file.read())
+
+def handle_cmd_accent():
+    """Handle accent color selection from command line arguments."""
+    if hasattr(cmd_opts, 'anxety') and cmd_opts.anxety:
+        arg_color = cmd_opts.anxety.lower()
+        if arg_color in ACCENTS:
+            opts.at_accent_color = arg_color
+            logger.info(f"Using command line accent color: {arg_color}")
+        else:
+            opts.at_accent_color = "anxety"
+            logger.warning(f"Invalid color '{cmd_opts.anxety}'. Defaulting to 'anxety'.")
+            logger.info(f"Available accent colors: {', '.join(ACCENTS)}")
+
+def apply_theme():
+    handle_cmd_accent()                        # Set accent color from command line if provided
+    shutil.copy(select_base_css(), STYLE_CSS)  # Copy the selected base CSS file to the main style file
+    update_accent_in_css()                     # Update the accent color variable in the CSS
+    append_active_modules()                    # Append active module CSS to the main style file
 
 def on_settings():
     """Create settings UI elements"""
     # Accent color selector
     opts.add_option(
-        "accent_color",
+        "at_accent_color",
         OptionInfo(
             default="anxety",
             label="Accent Color",
             component=gr.Radio,
-            component_args={"choices": accents},
-            onchange=on_accent_change,
+            component_args={"choices": ACCENTS},
+            onchange=update_accent_in_css,
             section=section,
             category_id="ui",
         ),
@@ -128,7 +122,7 @@ def on_settings():
     # Module selection
     module_names = get_module_names()
     opts.add_option(
-        "active_modules",
+        "at_active_modules",
         OptionInfo(
             default=module_names,
             label="Enabled Modules",

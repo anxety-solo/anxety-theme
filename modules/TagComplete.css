@@ -1,12 +1,12 @@
 /* === TagComplete - Modern Styling === */
 :root {
   /* Sizing */
-  --at-tc-width: 300px; /* Minimum width of dropdown */
+  --at-tc-width: 250px; /* Minimum width of dropdown */
   --at-tc-item-padding: 8px; /* Padding for list items */
   --at-tc-border-radius: 10px; /* Border radius for all rounded elements */
 
   /* Effects */
-  --at-tc-blur: blur(50px); /* Backdrop blur amount */
+  --at-tc-blur: blur(60px); /* Backdrop blur amount */
   --at-tc-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   --at-tc-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
@@ -18,14 +18,14 @@
 /* Remove alternating background colors from list items */
 .autocompleteResultsList > li:nth-child(odd),
 .autocompleteResultsList > li:nth-child(even) {
-  background-color: transparent !important;
+  background: rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Main dropdown container styling */
 .autocompleteResults {
   min-width: var(--at-tc-width) !important;
   max-height: 100% !important;
-  background: var(--ctp-base) !important;
+  background: rgba(0, 0, 0, 0.1) !important;
   border: 1px solid var(--ctp-surface1) !important;
   border-radius: var(--at-tc-border-radius) !important;
   backdrop-filter: var(--at-tc-blur);
