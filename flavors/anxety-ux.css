@@ -179,17 +179,20 @@ div.gradio-group > *:not(.absolute) {
   gap: 2px;
 }
 
+/* Menu when right-clicking on the “Generate” button */
 #context-menu {
   box-shadow: none;
   border-color: var(--ctp-surface2);
+  border-radius: 8px !important;
 }
 .context-menu-items a {
-  background-color: var(--ctp-base1);
+  background: var(--ctp-base1);
+  border-radius: 8px !important;
 }
 .context-menu-items a:hover {
-  color: white;
-  background-color: var(--ctp-surface0);
-  border-radius: 6px;
+  color: white !important;
+  background: var(--ctp-surface0);
+  border-radius: 8px !important;
 }
 
 .block.token-counter span {
@@ -230,10 +233,9 @@ input[type='number'] {
   background: var(--ctp-accent);
   color: var(--shadow);
 }
-
 .dark .progressDiv,
 .progressDiv {
-  background-color: var(--ctp-surface0);
+  background: var(--ctp-surface0);
 }
 
 .block.gradio-gallery {
@@ -254,7 +256,7 @@ input[type='number'] {
 
 /* === SLIDERS STYLE === */
 input[type='range'] {
-  background-color: var(--ctp-base2) !important;
+  background: var(--ctp-base2) !important;
   border-color: transparent;
 }
 
@@ -353,7 +355,7 @@ input[type='range']::-webkit-slider-thumb {
 
   width: var(--thumb-width, var(--thumb-height));
   background: linear-gradient(currentColor 0 0) scroll no-repeat left center / 50% calc(var(--track-height) + 1px);
-  background-color: currentColor;
+  background: currentColor;
   box-shadow: var(--box-fill);
   border-radius: var(--thumb-width, var(--thumb-height));
 

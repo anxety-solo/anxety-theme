@@ -142,13 +142,13 @@ a:hover {
 /* === Gradio (MAIN UI) Button === */
 .gradio-button.generate-box-skip,
 .gradio-button.generate-box-interrupt  {
-  background-color: var(--ctp-accent);
+  background: var(--ctp-accent);
   color: var(--ctp-base0);
   transition: all 0.1s ease;
 }
 .gradio-button.generate-box-skip:hover,
 .gradio-button.generate-box-interrupt:hover {
-  background-color: var(--ctp-accent);
+  background: var(--ctp-accent);
   filter: brightness(80%) !important;
   color: var(--ctp-base0);
 }
@@ -163,12 +163,12 @@ a:hover {
 }
 
 .gradio-button.generate-box-interrupting  {
-  background-color: var(--ctp-error);
+  background: var(--ctp-error);
   color: var(--ctp-base0);
   transition: all 0.1s ease;
 }
 .gradio-button.generate-box-interrupting:hover  {
-  background-color: var(--ctp-error);
+  background: var(--ctp-error);
   color: var(--ctp-base0);
 }
 
@@ -216,17 +216,20 @@ div.gradio-group > *:not(.absolute) {
   gap: 2px;
 }
 
+/* Menu when right-clicking on the “Generate” button */
 #context-menu {
   box-shadow: none;
   border-color: var(--ctp-surface2);
+  border-radius: 8px !important;
 }
 .context-menu-items a {
-  background-color: var(--ctp-base1);
+  background: var(--ctp-base1);
+  border-radius: 8px !important;
 }
 .context-menu-items a:hover {
-  color: white;
-  background-color: var(--ctp-surface0);
-  border-radius: 6px;
+  color: white !important;
+  background: var(--ctp-surface0);
+  border-radius: 8px !important;
 }
 
 .block.token-counter span {
@@ -267,10 +270,9 @@ input[type='number'] {
   background: var(--ctp-accent);
   color: var(--shadow);
 }
-
 .dark .progressDiv,
 .progressDiv {
-  background-color: var(--ctp-surface0);
+  background: var(--ctp-surface0);
 }
 
 .block.gradio-gallery {
@@ -299,7 +301,7 @@ input::-webkit-inner-spin-button {
 
 input[type='range'],
 input[type='range'].svelte-pc1gm4 {
-  background-color: var(--ctp-surface1);
+  background: var(--ctp-surface1);
   --thumb-height: 1em;
   --track-height: 0.125em;
   --track-color: var(--ctp-surface0);
@@ -339,13 +341,13 @@ input[type='range'].svelte-pc1gm4:focus::-ms-fill-upper {
 input[type='range']:hover,
 input[type='range'].svelte-pc1gm4:hover,
 input[type='radio']:hover {
-  background-color: var(--ctp-surface2);
+  background: var(--ctp-surface2);
 }
 
 input[type='range']:focus,
 input[type='range'].svelte-pc1gm4:focus,
 input[type='radio']:focus {
-  background-color: var(--ctp-surface2);
+  background: var(--ctp-surface2);
 }
 
 input[type='range'].win10-thumb {
@@ -377,7 +379,7 @@ input[type='range']::-webkit-slider-thumb,
 input[type='range'].svelte-pc1gm4::-webkit-slider-thumb {
   height: var(--thumb-height);
   width: var(--thumb-height);
-  background-color: var(--ctp-accent);
+  background: var(--ctp-accent);
   border: none;
   margin-top: calc((var(--track-height) / 2));
 }

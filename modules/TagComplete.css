@@ -105,13 +105,16 @@
   font-weight: 700 !important;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
+/* Highlight only when parent div has color: lightblue */
+.resultsFlexContainer[style*="color: lightblue"] .acListItem b {
+  color: var(--ctp-accent) !important;
+}
 
 /* Meta text (count) styling */
 .acMetaText {
   color: var(--ctp-subtext1) !important;
   transition: all var(--at-tc-transition-speed) ease;
 }
-
 /* Meta text hover state */
 li:hover .acMetaText {
   color: var(--ctp-accent) !important;
