@@ -2,7 +2,8 @@
 /* This module removes 'eye-gouging' styles */
 
 /* Change Gradio Color to Accent */
-:root, .dark {
+:root,
+.dark {
   --primary-400: var(--ctp-accent);
   --primary-500: var(--ctp-accent);
   --primary-600: var(--ctp-surface1);
@@ -16,36 +17,36 @@
   transition: 0.3s ease !important;
 }
 
-
 /* Tab-Button */
 #tab_SDHub .tab-nav > button.selected {
   box-shadow: 0 0 5px 2px var(--ctp-accent) !important;
-  background-color: var(--ctp-base0) !important;
+  background: var(--ctp-base0) !important;
 }
 #tab_SDHub .tab-nav > button:not(.selected) {
   box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.05) !important;
 }
 #tab_SDHub .tab-nav > button:not(.selected):hover {
   box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.15) !important;
-  background-color: rgba(255, 255, 255, 0.05) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 /* Gallery tab */
- .sdhub-gallery-image-name { /* Fix Rounded Image*/
-   border-radius: 8px;
+.sdhub-gallery-image-name {
+  /* Fix Rounded Image*/
+  border-radius: 8px;
 }
 /* Blur under image-name*/
 .sdhub-gallery-image-container:hover .sdhub-gallery-image-name {
   backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 #SDHub-Gallery-Tab-Button-Row > button.selected {
   box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.15) !important;
-  background-color: var(--ctp-mantle) !important;
+  background: var(--ctp-mantle) !important;
 }
 #SDHub-Gallery-Tab-Button-Row > button:not(.selected) {
-  background-color: var(--ctp-base2) !important;
+  background: var(--ctp-base2) !important;
 }
 #SDHub-Gallery-Tab-Button-Row > button:hover:not(.selected) {
   box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.15) !important;
@@ -54,13 +55,13 @@
 
 /* Gallery Settings-Box */
 #SDHub-Gallery-Setting-Box input {
-  border-color:  var(--ctp-surface1) !important;
+  border-color: var(--ctp-surface1) !important;
 }
 #SDHub-Gallery-Setting-Box input:hover {
-  border-color:  var(--ctp-surface2) !important;
+  border-color: var(--ctp-surface2) !important;
 }
 #SDHub-Gallery-Setting-Box input:focus {
-  border-color:  var(--ctp-accent) !important;
+  border-color: var(--ctp-accent) !important;
 }
 
 /* Hide Shits on Gallery Tab (imgchest) */
