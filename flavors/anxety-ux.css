@@ -156,6 +156,7 @@ input[type="search"]:focus {
 .wrap-inner { gap: 4px !important; }
 .wrap-inner > div.token {
   border-radius: 8px !important;
+  padding: 4px 8px !important;
 }
 
 /* Rounded Gradio Button */
