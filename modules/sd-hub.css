@@ -30,6 +30,16 @@
   background: rgba(255, 255, 255, 0.05) !important;
 }
 
+/* Gradio-Button */
+#tab_SDHub button.lg.primary:hover {
+    filter: brightness(75%) !important;
+    color: var(--button-primary-text-color) !important;
+}
+#tab_SDHub button.lg.secondary:hover {
+    filter: brightness(125%) !important;
+    color: var(--button-secondary-text-color) !important;
+}
+
 /* Gallery tab */
 .sdhub-gallery-image-name {
   /* Fix Rounded Image*/

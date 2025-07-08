@@ -1,7 +1,8 @@
 :root {
-  /* ACCENT COLOR */
+  /* ACCENT COLOR | THEME STYLE */
   --ctp-anxety: #db88ae;
   --ctp-error: #ff6747;
+  --ctp-border-radius: 8px;
 
   --ctp-pink: #d9b8b8;
   --ctp-red: #ff5252;
@@ -183,22 +184,23 @@ input[type="search"]:focus {
 /* Selected items (tokens) in multi-select dropdown */
 .wrap-inner { gap: 4px !important; }
 .wrap-inner > div.token {
-  border-radius: 8px !important;
+  border-radius: var(--ctp-border-radius) !important;
   padding: 4px 8px !important;
 }
 
-/* Rounded Gradio Button */
-.wrap, label, .block, .lg, .primary, .secondary, .gradio-button {
-  border-radius: 8px !important;
+/* Rounded Gradio Elements */
+.gradio-row, .wrap, label, .block, .lg, .primary, .secondary, .gradio-button {
+  border-radius: var(--ctp-border-radius) !important;
 }
 .wrap, label, .block { gap: 4px !important; }
+
 /* Fix Rounded Main Button UI */
 #txt2img_interrupt, #img2img_interrupt,
 #txt2img_interrupting, #img2img_interrupting {
-  border-radius: 8px 0 0 8px!important;
+  border-radius: var(--ctp-border-radius) 0 0 var(--ctp-border-radius) !important;
 }
 #txt2img_skip, #img2img_skip {
-  border-radius: 0 8px 8px 0 !important;
+  border-radius: 0 var(--ctp-border-radius) var(--ctp-border-radius) 0 !important;
 }
 
 /* Tabs Navigation */
@@ -221,16 +223,16 @@ div.gradio-group > *:not(.absolute) {
 #context-menu {
   box-shadow: none;
   border-color: var(--ctp-surface2);
-  border-radius: 8px !important;
+  border-radius: var(--ctp-border-radius) !important;
 }
 .context-menu-items a {
   background: var(--ctp-base1);
-  border-radius: 8px !important;
+  border-radius: var(--ctp-border-radius) !important;
 }
 .context-menu-items a:hover {
   color: white !important;
   background: var(--ctp-surface0);
-  border-radius: 8px !important;
+  border-radius: var(--ctp-border-radius) !important;
 }
 
 .block.token-counter span {
