@@ -293,28 +293,6 @@ input[type='number'] {
 
 
 /* === SLIDERS STYLE === */
-input[type='range']::-ms-track {
-  background: transparent;
-}
-
-input[type='range']::-ms-fill-lower {
-  background: var(--ctp-accent);
-  border-radius: 10px;
-}
-
-input[type='range']::-ms-fill-upper {
-  background: var(--ctp-overlay0);
-  border-radius: 10px;
-}
-
-input[type='range']:focus::-ms-fill-lower {
-  background: var(--ctp-accent);
-}
-
-input[type='range']:focus::-ms-fill-upper {
-  background: var(--ctp-overlay0);
-}
-
 input[type='range'] {
   font-size: 1.5rem;
 }
@@ -388,7 +366,7 @@ input[type='range']::-webkit-slider-thumb {
 
   width: var(--thumb-width, var(--thumb-height));
   background: linear-gradient(currentColor 0 0) scroll no-repeat left center / 50% calc(var(--track-height) + 1px);
-  background: currentColor;
+  background-color: currentColor;
   box-shadow: var(--box-fill);
   border-radius: var(--thumb-width, var(--thumb-height));
 
@@ -483,6 +461,7 @@ input[type='range']:active::-moz-range-progress {
 input[type='range']:disabled::-moz-range-thumb {
   cursor: not-allowed;
 }
+
 
 /* all of the input range stuff is from this guy*/
 /* Shout out to them https://codepen.io/ShadowShahriar/pen/zYPPYrQ */
