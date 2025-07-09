@@ -32,7 +32,7 @@
 
 /* Gradio-Button */
 #tab_SDHub button.lg.primary:hover {
-    filter: brightness(75%) !important;
+    filter: brightness(125%) !important;
     color: var(--button-primary-text-color) !important;
 }
 #tab_SDHub button.lg.secondary:hover {
