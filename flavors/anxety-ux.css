@@ -33,46 +33,55 @@
   color-scheme: dark;
 }
 
-:root,
-.dark {
+:root, .dark {
+  /* Basic colors and background */
   --color-accent: var(--ctp-accent);
 
   --body-background-fill: var(--background-fill-primary);
   --body-text-color: var(--ctp-subtext0);
-  --body-text-color-subdued: var(--ctp-subtext1);
-  --color-accent-soft: var(--ctp-surface0);
+  --body-text-color-subdued: var(--ctp-subtext2);
   --background-fill-primary: var(--ctp-mantle);
   --background-fill-secondary: var(--ctp-base0);
+  --color-accent-soft: var(--ctp-surface0);
+  /* Borders */
   --border-color-accent: var(--ctp-surface0);
-  --border-color-accent-subdued: var(--border-color-accent);
   --border-color-primary: var(--ctp-surface0);
-  --link-text-color-active: var(--ctp-subtext0);
+  --border-color-accent-subdued: var(--border-color-accent);
+  /* Links */
   --link-text-color: var(--ctp-subtext0);
   --link-text-color-hover: var(--ctp-accent);
+  --link-text-color-active: var(--ctp-subtext0);
   --link-text-color-visited: var(--ctp-subtext0);
-  --shadow-spread: none;
+  /* Blocks */
   --block-background-fill: var(--background-fill-primary);
   --block-border-color: var(--border-color-primary);
-  --block-border-width: none;
+  --block-border-width: None;
   --block-info-text-color: var(--body-text-color-subdued);
   --block-label-background-fill: var(--background-fill-secondary);
   --block-label-border-color: var(--border-color-primary);
-  --block-label-border-width: none;
+  --block-label-border-width: None;
   --block-label-text-color: var(--ctp-text);
-  --block-shadow: none;
-  --block-title-background-fill: none;
-  --block-title-border-color: none;
-  --block-title-border-width: none;
   --block-title-text-color: var(--ctp-text);
+  --block-shadow: None;
+  --block-title-background-fill: None;
+  --block-title-border-color: None;
+  --block-title-border-width: None;
+  /* Panels */
   --panel-background-fill: var(--background-fill-secondary);
   --panel-border-color: var(--border-color-primary);
   --panel-border-width: none;
+  /* Tables */
+  --table-border-color: var(--ctp-surface1);
+  --table-even-background-fill: var(--ctp-base1);
+  --table-odd-background-fill: var(--ctp-base2);
+  --table-row-focus: var(--color-accent-soft);
+  /* Checkboxes */
   --checkbox-background-color: var(--ctp-surface1);
   --checkbox-background-color-focus: var(--checkbox-background-color);
   --checkbox-background-color-hover: var(--ctp-surface2);
   --checkbox-background-color-selected: var(--ctp-accent);
   --checkbox-border-color: var(--ctp-surface2);
-  --checkbox-border-color-focus: transparent;
+  --checkbox-border-color-focus: transparent;;
   --checkbox-border-color-hover: transparent;
   --checkbox-border-color-selected: transparent;
   --checkbox-border-width: var(--input-border-width);
@@ -84,11 +93,13 @@
   --checkbox-label-border-width: var(--input-border-width);
   --checkbox-label-text-color: var(--body-text-color);
   --checkbox-label-text-color-selected: var(--checkbox-label-text-color);
+  /* Errors */
   --error-background-fill: var(--background-fill-primary);
   --error-border-color: var(--ctp-accent);
   --error-border-width: none;
   --error-text-color: var(--ctp-text);
   --error-icon-color: var(--ctp-accent);
+  /* Inputs */
   --input-background-fill: var(--ctp-base1);
   --input-background-fill-focus: var(--input-background-fill);
   --input-background-fill-hover: var(--input-background-fill);
@@ -99,13 +110,7 @@
   --input-placeholder-color: var(--ctp-surface1);
   --input-shadow: none;
   --input-shadow-focus: 0 0 0 var(--shadow-spread) var(--ctp-surface1), var(--shadow-inset);
-  --loader-color: var(--ctp-accent);
-  --slider-color: var(--ctp-accent);
-  --stat-background-fill: var(--ctp-surface1);
-  --table-border-color: var(--ctp-surface1);
-  --table-even-background-fill: var(--ctp-base1);
-  --table-odd-background-fill: var(--ctp-base2);
-  --table-row-focus: var(--color-accent-soft);
+  /* Buttons */
   --button-border-width: var(--input-border-width);
   --button-cancel-background-fill: var(--ctp-red);
   --button-cancel-background-fill-hover: var(--button-cancel-background-fill);
@@ -125,97 +130,31 @@
   --button-secondary-border-color-hover: var(--button-secondary-border-color);
   --button-secondary-text-color: var(--ctp-text);
   --button-secondary-text-color-hover: var(--button-secondary-text-color);
+  /* Others */
+  --shadow-spread: None;
   --chatbot-code-background-color: var(--background-fill-primary);
+  --stat-background-fill: var(--ctp-surface1);
+  --loader-color: var(--color-accent);
+  --slider-color: var(--ctp-accent);
 
   /* Params */
   --ae-primary-color: var(--ctp-accent);
 }
 
 /* HTML */
-html, body {
-  background: var(--ctp-mantle) !important;
-}
-a:hover {
-  color: var(--ctp-accent) !important;
-}
+html, body { background: var(--ctp-mantle) !important; }
+a:hover { color: var(--ctp-accent) !important; }
 
-
-/* Main customizations */
-.layout-footer,
-#sidebar_secondary_tabs {
-  display: none;
-}
-
-/* Other Customizations */
 select:focus,
 input[type="search"]:focus {
   outline: none !important;
   border: 2px solid var(--ctp-surface1) !important;
 }
 
-/* Selected items (tokens) in multi-select dropdown */
-.wrap-inner { gap: 4px !important; }
-.wrap-inner > div.token {
-  border-radius: var(--ctp-border-radius) !important;
-  padding: 4px 8px !important;
-}
-
-/* Rounded Gradio Elements */
-.gradio-row, .wrap, label, .block, .lg, .primary, .secondary, .gradio-button {
-  border-radius: var(--ctp-border-radius) !important;
-}
-.wrap, label, .block { gap: 4px !important; }
-
-#tabs > .tab-nav > button.selected,
-#txt2img_extra_tabs > .tab-nav > button.selected,
-#img2img_extra_tabs > .tab-nav > button.selected,
-#mode_img2img > .tab-nav > button.selected,
-#tabs .gradio-tabs > .tab-nav > button.selected {
-  color: var(--ctp-accent);
-}
-
-
-/* OLD */
-div.gradio-group > *:not(.absolute) {
-  /* margin-bottom: 2px; */
-  gap: 2px;
-}
-
-/* Menu when right-clicking on the “Generate” button */
-#context-menu {
-  box-shadow: none;
-  border-color: var(--ctp-surface2);
-  border-radius: var(--ctp-border-radius) !important;
-}
-.context-menu-items a {
-  background: var(--ctp-base1);
-  border-radius: var(--ctp-border-radius) !important;
-}
-.context-menu-items a:hover {
-  color: white !important;
-  background: var(--ctp-surface0);
-  border-radius: var(--ctp-border-radius) !important;
-}
-
-.block.token-counter span {
-  box-shadow: none;
-}
-
-.gradio-button:hover,
-.lg.secondary:hover {
-  filter: brightness(125%);
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  cursor: pointer;
-  accent-color: var(--ctp-accent);
-}
-
-::-moz-selection { /* Code for Firefox */
+::selection {
   background: var(--ctp-surface1);
 }
-::selection {
+::-moz-selection { /* Code for Firefox */
   background: var(--ctp-surface1);
 }
 
@@ -231,6 +170,56 @@ input[type='number'] {
   -moz-appearance: textfield !important;
 }
 
+
+/* Gradio Fiches */
+/* Rounded Gradio Elements */
+.gradio-row, .wrap, label, .block, .lg, .primary, .secondary, .gradio-button {
+  border-radius: var(--ctp-border-radius) !important;
+}
+.wrap, label, .block { gap: 4px !important; }
+
+/* Tabs Navigation (Accent Color) */
+#tabs > .tab-nav > button.selected,
+#txt2img_extra_tabs > .tab-nav > button.selected,
+#img2img_extra_tabs > .tab-nav > button.selected,
+#mode_img2img > .tab-nav > button.selected,
+#tabs .gradio-tabs > .tab-nav > button.selected {
+  color: var(--ctp-accent);
+}
+
+/* Selected items (tokens) in multi-select dropdown */
+.wrap-inner { gap: 4px !important; }
+.wrap-inner > div.token {
+  border-radius: var(--ctp-border-radius) !important;
+  padding: 4px 8px !important;
+}
+
+div.gradio-group > *:not(.absolute) {
+  /* margin-bottom: 2px; */
+  gap: 2px;
+}
+
+.gradio-button:hover,
+button.lg.primary:hover
+button.lg.secondary:hover {
+  filter: brightness(125%);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+  accent-color: var(--ctp-accent);
+}
+
+
+/* Main customizations */
+/* Hide UX-Shits */
+.layout-footer,
+#sidebar_secondary_tabs {
+  display: none;
+}
+
+/* Other Customizations */
 .progressDiv .progress {
   background: var(--ctp-accent);
   color: var(--shadow);
@@ -247,12 +236,28 @@ input[type='number'] {
   border-radius: var(--block-radius);
   background: var(--block-background-fill);
 }
-
 .block.gradio-accordion {
   box-shadow: var(--block-shadow);
   border-width: var(--block-border-width);
   border-color: var(--block-border-color);
   border-radius: var(--block-radius);
+}
+
+
+/* HUETA */
+/* Menu when right-clicking on the “Generate” button */
+#context-menu {
+  box-shadow: none;
+  border-color: var(--ctp-surface2);
+  border-radius: var(--ctp-border-radius) !important;
+}
+.context-menu-items a {
+  background: var(--ctp-base1);
+  border-radius: var(--ctp-border-radius) !important;
+}
+.context-menu-items a:hover {
+  color: var(--ctp-text) !important;
+  background: var(--ctp-surface0);
 }
 
 
