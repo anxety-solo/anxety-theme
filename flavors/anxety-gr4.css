@@ -274,6 +274,15 @@ input[type="radio"] {
   border-radius: var(--block-radius);
 }
 
+/* Makes buttons - “Buttons” - Not blend with bg */
+button.gradio-button,
+div.gradio-row:has(> button.gradio-button){
+  gap: 2px;
+}
+button.gradio-button {
+  background: var(--ctp-base1);
+}
+
 
 /* HUETA */
 /* Menu when right-clicking on the “Generate” button */
