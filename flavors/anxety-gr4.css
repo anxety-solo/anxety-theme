@@ -55,17 +55,17 @@
   /* Blocks */
   --block-background-fill: var(--background-fill-primary);
   --block-border-color: var(--border-color-primary);
-  --block-border-width: None;
+  --block-border-width: none;
   --block-info-text-color: var(--body-text-color-subdued);
   --block-label-background-fill: var(--background-fill-secondary);
   --block-label-border-color: var(--border-color-primary);
-  --block-label-border-width: None;
+  --block-label-border-width: none;
   --block-label-text-color: var(--ctp-text);
   --block-title-text-color: var(--ctp-text);
-  --block-shadow: None;
-  --block-title-background-fill: None;
-  --block-title-border-color: None;
-  --block-title-border-width: None;
+  --block-shadow: none;
+  --block-title-background-fill: none;
+  --block-title-border-color: none;
+  --block-title-border-width: none;
   /* Panels */
   --panel-background-fill: var(--background-fill-secondary);
   --panel-border-color: var(--border-color-primary);
@@ -131,7 +131,7 @@
   --button-secondary-text-color: var(--ctp-text);
   --button-secondary-text-color-hover: var(--button-secondary-text-color);
   /* Others */
-  --shadow-spread: None;
+  --shadow-spread: none;
   --chatbot-code-background-color: var(--background-fill-primary);
   --stat-background-fill: var(--ctp-surface1);
   --loader-color: var(--color-accent);
@@ -247,6 +247,10 @@ input[type="radio"] {
 
 
 /* Other Customizations */
+.block.token-counter span {
+  box-shadow: none;
+}
+
 .progressDiv .progress {
   background: var(--ctp-accent);
   color: var(--shadow);
