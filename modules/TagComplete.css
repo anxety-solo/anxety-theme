@@ -18,7 +18,7 @@
 /* Remove alternating background colors from list items */
 .autocompleteResultsList > li:nth-child(odd),
 .autocompleteResultsList > li:nth-child(even) {
-  background: rgba(0, 0, 0, 0.2) !important;
+  background: rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Main dropdown container styling */
@@ -52,13 +52,14 @@
 
 /* Hover state for list items */
 .autocompleteResultsList li:hover {
-  background: var(--ctp-surface0) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: var(--ctp-surface1) !important;
   box-shadow: var(--at-tc-hover-shadow);
 }
-
 /* Selected item styling (keyboard navigation) */
 .autocompleteResultsList > li.selected {
-  background: var(--ctp-surface1) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: var(--ctp-surface1) !important;
   box-shadow: inset 2px 0 0 var(--ctp-accent), var(--at-tc-hover-shadow) !important;
   transform: translateX(2px);
 }
@@ -98,6 +99,7 @@
 .acListItem {
   flex-grow: 1 !important;
   font-weight: 400 !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5) !important;
 }
 /* Highlight matching characters in search */
 .acListItem b {

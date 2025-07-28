@@ -5,7 +5,6 @@ onUiLoaded(function() {
             input.classList.remove('svelte-pc1gm4');
         });
     }
-    // Run
     removeRangeClass();
 
     console.log('[Anxety-Theme]: Range input class remover loaded - Forge Slider Fixed.');

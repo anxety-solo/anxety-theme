@@ -204,8 +204,8 @@ button.lg.secondary:hover {
   filter: brightness(125%);
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type="radio"],
+input[type="checkbox"] {
   cursor: pointer;
   accent-color: var(--ctp-accent);
 }

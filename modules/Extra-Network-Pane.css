@@ -5,6 +5,11 @@
   --at-enp-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   --at-enp-card-hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.12), 0 0 0 2px var(--ctp-accent);
 
+  /* Card Styles */
+  /* --at-enp-card-width: 200px; */
+  /* --at-enp-card-height: 300px; */
+  --at-enp-card-text-size: 0.7em;
+
   /* Card-Button */
   --at-enp-card-radius: 12px;
   --at-enp-button-row-bg: rgba(0, 0, 0, 0.7);
@@ -23,6 +28,8 @@
 .extra-network-pane .card {
   position: relative;
   padding: 0;
+  /* width: var(--at-enp-card-width) !important; */
+  /* height: var(--at-enp-card-height) !important; */
   border-radius: var(--at-enp-card-radius);
   box-shadow: var(--at-enp-card-shadow);
   text-align: center;
@@ -108,7 +115,7 @@
   padding: 4px 12px;
   max-width: 100%;
   color: white;
-  font-size: 14px;
+  font-size: var(--at-enp-card-text-size) !important;
   background: var(--at-enp-name-bg);
   border-radius: 20px;
   backdrop-filter: var(--at-enp-name-bg-blur);
