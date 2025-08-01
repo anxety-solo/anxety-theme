@@ -16,14 +16,14 @@
   --ctp-subtext2: #939a9c;
   --ctp-subtext1: #d3dce0;
   --ctp-subtext0: #bbc2c6;
-  --ctp-overlay2: #9399b2;
-  --ctp-overlay1: #7f849c;
-  --ctp-overlay0: #6c7086;
+  --ctp-overlay2: #242424;
+  --ctp-overlay1: #1c1c1c;
+  --ctp-overlay0: #141414;
   --ctp-surface2: #475254;
   --ctp-surface1: #3d4142;
   --ctp-surface0: #22282a;
   --ctp-base2: #232323;
-  --ctp-base1: #181818;
+  --ctp-base1: #171717;
   --ctp-base0: #131313;
 
   --ctp-mantle: #0b0b0b;
@@ -138,6 +138,7 @@
   --slider-color: var(--ctp-accent);
 
   /* Params */
+  --neutral-950: var(--ctp-mantle);
   --ae-primary-color: var(--ctp-accent);
 }
 

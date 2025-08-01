@@ -1,11 +1,11 @@
-from pathlib import Path
 import gradio as gr
 import shutil
 import re
 import os
+from pathlib import Path
 
-from modules.script_callbacks import on_ui_settings
 from modules.shared import OptionInfo, opts, cmd_opts
+from modules.script_callbacks import on_ui_settings
 from modules.scripts import basedir
 from modules import launch_utils
 
@@ -29,17 +29,19 @@ STYLE_CSS = SCRIPT_PATH / 'style.css'
 
 # --- LOGGER ---
 class Logger:
+    PREFIX = '[Anxety-Theme]'
+
     @staticmethod
     def error(message: str):
-        print(f"\033[31m[Anxety-Theme]:\033[0m {message}", flush=True)
+        print(f"\033[31m{Logger.PREFIX}\033[0m - {message}")
 
     @staticmethod
     def warning(message: str):
-        print(f"\033[33m[Anxety-Theme]:\033[0m {message}", flush=True)
+        print(f"\033[33m{Logger.PREFIX}\033[0m - {message}")
 
     @staticmethod
     def info(message: str):
-        print(f"\033[34m[Anxety-Theme]:\033[0m {message}", flush=True)
+        print(f"\033[34m{Logger.PREFIX}\033[0m - {message}")
 
 logger = Logger()
 
@@ -132,7 +134,7 @@ def handle_cmd_accent():
             logger.info(f"Using command line accent color: {arg_color}")
         else:
             opts.at_accent_color = 'anxety'
-            logger.warning(f"Invalid color '{cmd_opts.anxety}'. Defaulting to 'anxety'.")
+            logger.warning(f"Invalid command line color '{cmd_opts.anxety}'. Defaulting to 'anxety'.")
             logger.info(f"Available accent colors: {', '.join(ACCENTS)}")
 
 

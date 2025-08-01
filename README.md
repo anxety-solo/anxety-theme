@@ -6,11 +6,11 @@
 
 <div align="center">
     <h6>-> A1111/Forge <-</h6>
-    <img width="auto" height="auto" src="https://raw.githubusercontent.com/anxety-solo/anxety-theme/main/preview/A1111.png"/>
+    <img width="auto" height="auto" src="./preview/A1111.png"/>
     <h6>-> ComfyUI <-</h6>
-    <img width="auto" height="auto" src="https://raw.githubusercontent.com/anxety-solo/anxety-theme/main/preview/ComfyUI.png"/>
+    <img width="auto" height="auto" src="./preview/ComfyUI.png"/>
     <h6>-> SD-UX <-</h6>
-    <img width="auto" height="auto" src="https://raw.githubusercontent.com/anxety-solo/anxety-theme/main/preview/SD-UX.png"/>
+    <img width="auto" height="auto" src="./preview/SD-UX.png"/>
 </div>
 
 
@@ -25,7 +25,7 @@
 6. Apply settings and fully reload the UI
 
 #### For ComfyUI (Theme Import Method)
-1. Download the theme file → [`comfy-anxety.json`](https://github.com/anxety-solo/anxety-theme/blob/main/comfy-anxety.json)
+1. Download the theme file (RAW) → [`comfy-anxety.json`](https://raw.githubusercontent.com/anxety-solo/anxety-theme/refs/heads/main/comfy-anxety.json)
 2. Open ComfyUI
 3. Go to Settings → Appearance → "Color Pallete"
 4. Import `comfy-anxety.json`
