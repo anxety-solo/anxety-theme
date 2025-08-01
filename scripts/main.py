@@ -150,7 +150,7 @@ def on_settings():
         'at_accent_color',
         OptionInfo(
             default='anxety',
-            label='Accent Color.',
+            label='Accent Color',
             component=gr.Radio,
             component_args={'choices': ACCENTS},
             onchange=update_accent_in_css,
@@ -164,7 +164,7 @@ def on_settings():
         'at_custom_hex_color',
         OptionInfo(
             default='',
-            label='Custom Hex Color.',
+            label='Custom Hex Color',
             component=gr.Textbox,
             component_args={'placeholder': 'Enter hex color (e.g. #ff00ff, #123abc, #FАА)'},
             onchange=update_accent_in_css,
@@ -179,13 +179,13 @@ def on_settings():
         'at_active_modules',
         OptionInfo(
             default=module_names,
-            label='Enabled Modules.',
+            label='Enabled Modules',
             component=gr.CheckboxGroup,
             component_args={'choices': module_names},
             onchange=apply_theme,
             section=SECTION,
             category_id='ui',
-        ).info('Select which modules should be enabled in the interface.')
+        ).info('Select which modules should be enabled in the interface')
     )
 
     # Initial theme setup

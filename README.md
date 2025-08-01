@@ -21,7 +21,7 @@
 2. Navigate to "Extensions" → "Install from URL"
 3. Paste `https://github.com/anxety-solo/anxety-theme`
 4. Click "Install" and reload WebUI
-5. Go to Settings → "Anxety Theme" to configure options
+5. Go to Settings → "Anxety-Theme" to configure options
 6. Apply settings and fully reload the UI
 
 #### For ComfyUI (Theme Import Method)
