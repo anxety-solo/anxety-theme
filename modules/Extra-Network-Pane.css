@@ -112,11 +112,12 @@
 }
 
 .extra-network-pane .card .name {
-  padding: 4px 12px;
+  padding: 6px 12px;
   max-width: 100%;
   color: white;
   font-size: var(--at-enp-card-text-size) !important;
   background: var(--at-enp-name-bg);
+  border: 1px solid var(--ctp-overlay2);
   border-radius: 20px;
   backdrop-filter: var(--at-enp-name-bg-blur);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
@@ -124,12 +125,14 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: all 0.3s ease;
+  line-height: 1;
+  transition: all 0.2s ease;
 }
 .extra-network-pane .card .name:hover {
-  white-space: normal;
   overflow: visible;
+  white-space: normal;
   text-overflow: clip;
+  line-height: 1.25;
   background: rgba(0, 0, 0, 0.7);
 }
 

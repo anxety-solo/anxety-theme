@@ -13,6 +13,7 @@
     <img width="auto" height="auto" src="./preview/SD-UX.png"/>
 </div>
 
+<h1></h1>
 
 ### 🛠 Installation
 
@@ -21,7 +22,7 @@
 2. Navigate to "Extensions" → "Install from URL"
 3. Paste `https://github.com/anxety-solo/anxety-theme`
 4. Click "Install" and reload WebUI
-5. Go to Settings → "Anxety-Theme" to configure options
+5. Go to Settings → "Anxety Theme" to configure options
 6. Apply settings and fully reload the UI
 
 #### For ComfyUI (Theme Import Method)
@@ -42,5 +43,6 @@ The theme also **modifies the style and design** of several Stable Diffusion Web
 - **TagComplete**: The theme customizes its autocomplete dropdown and input styling to blend seamlessly with the dark theme environment.
   </br>[GitHub - DominikDoom/a1111-sd-webui-tagcomplete](https://github.com/DominikDoom/a1111-sd-webui-tagcomplete)
 
+<h1></h1>
 
 <div align="center"> <h6>🖌 Based on <a href="https://github.com/catppuccin/stable-diffusion-webui">Catppuccin Theme</a> 🖌</h6> </div>
