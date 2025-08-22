@@ -138,6 +138,7 @@
   --slider-color: var(--ctp-accent);
 
   /* Params */
+  --neutral-900: var(--ctp-base1);
   --neutral-950: var(--ctp-mantle);
 }
 
@@ -200,7 +201,7 @@ div.gradio-group > *:not(.absolute) {
 }
 
 .gradio-button:hover,
-button.lg.primary:hover
+button.lg.primary:hover,
 button.lg.secondary:hover {
   filter: brightness(125%);
 }

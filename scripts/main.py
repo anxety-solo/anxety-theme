@@ -12,15 +12,14 @@ from modules import launch_utils
 
 # --- CONSTANTS ---
 SECTION = ('ctp', 'Anxety-Theme')
-
 ACCENTS = (
     'anxety',    # Main Accent
+    'blue',
+    'green',
+    'peach',
     'pink',
     'red',
-    'peach',
-    'yellow',
-    'green',
-    'blue'
+    'yellow'
 )
 SCRIPT_PATH = Path(basedir())
 MODULES_DIR = SCRIPT_PATH / 'modules'
