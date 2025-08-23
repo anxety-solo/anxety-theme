@@ -138,6 +138,13 @@ def handle_cmd_accent():
 
 
 def apply_theme():
+    # Check if theme is disabled
+    if getattr(opts, 'at_disable_theme', False):
+        with open(STYLE_CSS, 'w') as file:
+            file.write('/* Anxety-Theme */\n')
+        logger.info('Theme disabled :c')
+        return
+    
     handle_cmd_accent()                        # Set accent color from command line if provided
     shutil.copy(select_base_css(), STYLE_CSS)  # Copy the selected base CSS file to the main style file
     update_accent_in_css()                     # Update the accent color variable in the CSS
@@ -146,7 +153,21 @@ def apply_theme():
 
 def on_settings():
     """Create settings UI elements"""
-    # Accent color selector
+    # Theme disable option
+    opts.add_option(
+        'at_disable_theme',
+        OptionInfo(
+            default=False,
+            label='Disable Theme',
+            component=gr.Checkbox,
+            component_args={},
+            onchange=apply_theme,
+            section=SECTION,
+            category_id='ui',
+        ).info('When enabled, the theme will be disabled')
+    )
+
+    # Accent color selection
     opts.add_option(
         'at_accent_color',
         OptionInfo(
