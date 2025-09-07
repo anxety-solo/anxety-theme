@@ -140,3 +140,7 @@
 .copy-path-button {
   margin: 0 !important;
 }
+
+.extra-network-pane .card .description { /* BullShits :3 */
+  display: none !important;
+}

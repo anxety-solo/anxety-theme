@@ -19,8 +19,9 @@
 
 /* Tab-Button */
 #tab_SDHub .tab-nav > button.selected {
-  box-shadow: 0 0 5px 2px var(--ctp-accent) !important;
+  box-shadow: 0 0 8px -2px var(--ctp-accent) !important;
   background: var(--ctp-base0) !important;
+  border-color: color-mix(in srgb, var(--ctp-accent) 80%, transparent) !important;
 }
 #tab_SDHub .tab-nav > button:not(.selected) {
   box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.05) !important;
