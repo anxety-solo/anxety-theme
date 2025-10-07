@@ -47,7 +47,7 @@ logger = Logger()
 
 # --- UTILS ---
 def validate_hex_color(color: str) -> str:
-    """Validate and normalize hex color format."""
+    """Validate and normalize hex color format"""
     if not color:
         return ''
 
@@ -68,13 +68,13 @@ def validate_hex_color(color: str) -> str:
     return f"#{color.upper()}"
 
 def get_module_names():
-    """Return a list of available module names (CSS files) in the modules directory."""
+    """Return a list of available module names (CSS files) in the modules directory"""
     if MODULES_DIR.exists():
         return [f.stem for f in MODULES_DIR.glob('*.css') if f.is_file()]
     return []
 
 def select_base_css():
-    """Select and return the appropriate base CSS file path."""
+    """Select and return the appropriate base CSS file path"""
     git_tag = launch_utils.git_tag()
     is_sd_ux = '-' in git_tag and git_tag[0] == 'v' and git_tag.count('-') >= 2
     if is_sd_ux:
@@ -85,7 +85,7 @@ def select_base_css():
         return SCRIPT_PATH / 'flavors/anxety.css'
 
 def update_accent_in_css():
-    """Update the accent color variable in the main CSS file."""
+    """Update the accent color variable in the main CSS file"""
     current_accent = getattr(opts, 'at_accent_color', 'anxety')
     custom_hex = getattr(opts, 'at_custom_hex_color', '')
 
@@ -114,7 +114,7 @@ def update_accent_in_css():
         file.truncate()
 
 def append_active_modules():
-    """Append the CSS of all active modules to the main style file."""
+    """Append the CSS of all active modules to the main style file"""
     active_modules = getattr(opts, 'at_active_modules', [])
     with open(STYLE_CSS, 'a') as main_css:
         for module_name in active_modules:
@@ -125,7 +125,7 @@ def append_active_modules():
                     main_css.write(mod_file.read())
 
 def handle_cmd_accent():
-    """Handle accent color selection from command line arguments."""
+    """Handle accent color selection from command line arguments"""
     if hasattr(cmd_opts, 'anxety') and cmd_opts.anxety:
         arg_color = cmd_opts.anxety.lower()
         if arg_color in ACCENTS:
@@ -144,7 +144,7 @@ def apply_theme():
             file.write('/* Anxety-Theme */\n')
         logger.info('Theme disabled :c')
         return
-    
+
     handle_cmd_accent()                        # Set accent color from command line if provided
     shutil.copy(select_base_css(), STYLE_CSS)  # Copy the selected base CSS file to the main style file
     update_accent_in_css()                     # Update the accent color variable in the CSS
