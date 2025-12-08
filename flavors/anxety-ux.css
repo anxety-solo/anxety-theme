@@ -212,6 +212,38 @@ input[type="checkbox"] {
   cursor: pointer;
   accent-color: var(--ctp-accent);
 }
+input[type="radio"]::after, /* check icon */
+input[type="checkbox"]::after {
+  color: var(--button-primary-text-color);
+}
+
+/* Settings Tab buttons */
+.tab-nav button.selected,
+.tab-nav button:hover {
+  color: var(--button-primary-text-color) !important;
+}
+
+/* Gradio Buttons - Active & Hover states */
+/* Target both button text and nested span elements */
+button.active span,
+button:hover span,
+button.lg.primary:hover,
+button.lg.secondary:hover,
+button.lg.primary:hover span,
+button.lg.secondary:hover span {
+  color: var(--button-primary-text-color) !important;
+}
+
+/* Icon styling for active and hover states */
+button.active .mask-icon,
+button:hover .mask-icon {
+  background-color: var(--button-primary-text-color) !important;
+}
+
+/* Tool buttons with mini-badges */
+button.lg.tool::after {
+  background-color: var(--button-primary-text-color) !important;
+}
 
 
 /* Main customizations */
@@ -247,23 +279,6 @@ input[type="checkbox"] {
   border-width: var(--block-border-width);
   border-color: var(--block-border-color);
   border-radius: var(--block-radius);
-}
-
-
-/* HUETA */
-/* Menu when right-clicking on the “Generate” button */
-#context-menu {
-  box-shadow: none;
-  border-color: var(--ctp-surface2);
-  border-radius: var(--ctp-border-radius) !important;
-}
-.context-menu-items a {
-  background: var(--ctp-base1);
-  border-radius: var(--ctp-border-radius) !important;
-}
-.context-menu-items a:hover {
-  color: var(--ctp-text) !important;
-  background: var(--ctp-surface0);
 }
 
 
