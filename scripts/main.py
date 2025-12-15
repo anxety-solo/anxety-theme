@@ -73,11 +73,25 @@ def get_module_names():
         return [f.stem for f in MODULES_DIR.glob('*.css') if f.is_file()]
     return []
 
+def is_sd_ux():
+    """Check if SD-UX is installed by scanning extensions-builtin directory"""
+    try:
+        # Get parent directory of extensions (where UI root is)
+        extensions_dir = SCRIPT_PATH.parent
+        ui_root = extensions_dir.parent
+
+        # Check for extensions-builtin/sd-webui-ux
+        extensions_builtin = ui_root / 'extensions-builtin'
+        sd_ux_path = extensions_builtin / 'sd-webui-ux'
+
+        return sd_ux_path.exists() and sd_ux_path.is_dir()
+    except Exception as e:
+        logger.warning(f"Error checking for SD-UX: {e}")
+        return False
+
 def select_base_css():
     """Select and return the appropriate base CSS file path"""
-    git_tag = launch_utils.git_tag()
-    is_sd_ux = '-' in git_tag and git_tag[0] == 'v' and git_tag.count('-') >= 2
-    if is_sd_ux:
+    if is_sd_ux():
         return SCRIPT_PATH / 'flavors/anxety-ux.css'
     elif gr.__version__ >= '4.40.0':
         return SCRIPT_PATH / 'flavors/anxety-gr4.css'
