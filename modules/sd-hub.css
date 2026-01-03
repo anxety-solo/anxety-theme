@@ -1,82 +1,142 @@
-/* === SD-HUB Extension === */
+/* === SD-HUB Extension (for V12) === */
 /* This module removes 'eye-gouging' styles */
+
 
 /* Change Gradio Color to Accent */
 :root,
 .dark {
-  --primary-400: var(--ctp-accent);
-  --primary-500: var(--ctp-accent);
-  --primary-600: var(--ctp-surface1);
+  --primary-400: var(--ctp-accent) !important;
+  --primary-500: var(--ctp-accent) !important;
+  --primary-600: var(--ctp-surface1) !important;
 }
 
-/* Main Tabs | Remove Shits Glowing */
+/* GLOBAL RESETS */
 #tab_SDHub *,
 #tab_SDHub *:hover {
   box-shadow: none !important;
   filter: none !important;
-  transition: 0.3s ease !important;
+  transition: 0.25s ease !important;
 }
 
-/* Tab-Button */
+
+/* TAB NAVIGATION */
 #tab_SDHub .tab-nav > button.selected {
-  box-shadow: 0 0 8px -2px var(--ctp-accent) !important;
   background: var(--ctp-base0) !important;
   border-color: color-mix(in srgb, var(--ctp-accent) 80%, transparent) !important;
+  box-shadow: 0 0 8px -2px var(--ctp-accent) !important;
 }
+
 #tab_SDHub .tab-nav > button:not(.selected) {
   box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.05) !important;
 }
 #tab_SDHub .tab-nav > button:not(.selected):hover {
-  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.15) !important;
   background: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.15) !important;
 }
 
-/* Gradio-Button */
+
+/* BUTTONS */
+#tab_SDHub button.lg.primary {
+  color: var(--button-primary-text-color);
+  background: var(--button-primary-background-fill);
+}
 #tab_SDHub button.lg.primary:hover {
-    filter: brightness(125%) !important;
-    color: var(--button-primary-text-color) !important;
+  filter: brightness(125%) !important;
+}
+
+#tab_SDHub button.lg.secondary {
+  color: var(--button-scondary-text-color);
+  background: var(--button-secondary-background-fill);
 }
 #tab_SDHub button.lg.secondary:hover {
-    filter: brightness(125%) !important;
-    color: var(--button-secondary-text-color) !important;
+  filter: brightness(125%) !important;
+  color: var(--button-secondary-text-color) !important;
 }
 
-/* Gallery tab */
-.sdhub-gallery-image-name {
-  /* Fix Rounded Image*/
-  border-radius: 8px;
-}
-/* Blur under image-name*/
-.sdhub-gallery-image-container:hover .sdhub-gallery-image-name {
-  backdrop-filter: blur(5px);
-  background: rgba(0, 0, 0, 0.3);
-}
 
+/* GALLERY TAB */
+.sdhub-gallery-img-name {
+  backdrop-filter: blur(5px) !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
 #SDHub-Gallery-Tab-Button-Row > button.selected {
-  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.15) !important;
-  background: var(--ctp-mantle) !important;
+  color: var(--button-primary-text-color) !important;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.05) !important;
 }
+
 #SDHub-Gallery-Tab-Button-Row > button:not(.selected) {
-  background: var(--ctp-base2) !important;
+  color: var(--button-secondary-text-color) !important;
+  background: var(--ctp-mantle) !important;
 }
 #SDHub-Gallery-Tab-Button-Row > button:hover:not(.selected) {
   box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.15) !important;
   cursor: pointer !important;
 }
 
-/* Gallery Settings-Box */
-#SDHub-Gallery-Setting-Box input {
-  border-color: var(--ctp-surface1) !important;
+/* Gallery page navigation */
+#SDHub-Gallery-Setting-Nav > span {
+  background: var(--ctp-mantle) !important;
 }
-#SDHub-Gallery-Setting-Box input:hover {
+#SDHub-Gallery-Setting-Nav:hover > span {
+  background: var(--ctp-base0) !important;
+}
+
+.sdhub-gallery-page-nav .sdhub-gallery-tab-image-counter,
+.sdhub-gallery-page-nav .sdhub-gallery-page-indicator {
+  background: var(--ctp-mantle) !important;
+}
+
+/* Accordion */
+#SDHub-Tab .sdhub-accordion {
+  border: 2px solid var(--border-color-primary) !important;
+}
+
+
+/* GALLERY SETTINGS (POPUP) */
+#SDHub-Gallery-Setting {
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Exit button */
+#SDHub-Gallery-Setting-Exit-Button:hover {
+  background: var(--ctp-accent) !important;
+}
+#SDHub-Gallery-Setting-Exit-Button:hover svg {
+  color: var(--ctp-base2) !important;
+}
+
+/* Inputs */
+#SDHub-Gallery-Setting-Wrapper input {
+  border: 2px solid var(--ctp-surface1) !important;
+}
+#SDHub-Gallery-Setting-Wrapper input:hover {
   border-color: var(--ctp-surface2) !important;
 }
-#SDHub-Gallery-Setting-Box input:focus {
+#SDHub-Gallery-Setting-Wrapper input:focus {
   border-color: var(--ctp-accent) !important;
 }
 
-/* Hide Shits on Gallery Tab (imgchest) */
-#SDHub-Gallery-imgchest-Button,
-#SDHub-Gallery-imgchest-Column {
+/* Apply button */
+#SDHub-Gallery-Setting-Apply-Button {
+  color: var(--button-secondary-text-color) !important;
+  background: var(--ctp-mantle) !important;
+}
+#SDHub-Gallery-Setting-Apply-Button:hover {
+  color: var(--button-primary-text-color) !important;
+  background: var(--button-primary-background-fill) !important;
+}
+
+/* Checkboxes */
+.sdhub-gallery-setting-checkbox-input {
+  background: var(--ctp-surface1) !important;
+}
+.sdhub-gallery-setting-checkbox-input:checked {
+  background: var(--ctp-accent) !important;
+}
+
+
+/* UTILITIES */
+#SDHub-Gallery-ImgChest-Button,
+#SDHub-Gallery-ImgChest-Column {
   display: none !important;
 }
