@@ -1,80 +1,77 @@
 /* === Modern Table === */
 :root {
-  --at-tb-tbody-padding: 4px 16px;
-  --at-tb-font-size: 1.1em;
+  --at-tb-padding: 4px 12px;
+  --at-tb-font-size: 1em;
   --at-tb-deco-color: #484848;
 }
 
+/* Table Base */
 table {
   /* margin: 0 auto; */
-  width: auto !important;
-  max-width: none !important;
-  border-radius: 8px;
-  border-spacing: 0;
+  width: auto;
+  max-width: none;
   border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Remove all Borders */
+/* Remove default borders */
 table,
 table th,
 table td {
   border: none !important;
 }
+/* Vertical dividers */
+table th,
+table td {
+  border-right: 1px solid var(--ctp-base2) !important;
+}
+/* Remove divider on last column */
+table th:last-child,
+table td:last-child {
+  border-right: none !important;
+}
 
-/* Table Headers */
+/* Header */
 table thead th {
-  position: relative;
-  padding: var(--at-tb-tbody-padding) !important;
-  background: linear-gradient(
-  		135deg,
-    	var(--ctp-base1) 0%,
-    	var(--ctp-base2) 100%
- 	);
+  padding: var(--at-tb-padding) !important;
+  background: var(--ctp-base1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-/* Table cells */
+/* Body cells */
 table tbody td {
-  padding: var(--at-tb-tbody-padding) !important;
+  padding: var(--at-tb-padding) !important;
   background: var(--ctp-overlay0);
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-  font-size: var(--at-tb-font-size);
-  line-height: 1.4;
-  transition: all 0.2s ease;
+  font-size: var(--at-tb-font-size) !important;
+  line-height: 1.3;
 }
-/* Alternating Rows */
+/* Alternating rows */
 table tbody tr:nth-child(even) td {
   background: var(--ctp-overlay1);
 }
-/* URL UnderLine */
+table tbody tr:hover td {
+  background: var(--ctp-base2);
+}
+
+/* First column emphasis */
+table tbody td:first-child {
+  font-weight: 600;
+}
+
+/* Links */
 table tbody td a {
   text-decoration: underline !important;
   text-decoration-color: var(--at-tb-deco-color) !important;
 }
 
-/* Row Hover Effect */
-table tbody tr:hover td {
-  background: var(--ctp-base2) !important;
-  border-top: 1px solid transparent !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
-}
-
-/* First Column of The Table */
-table tbody tr td:first-child {
-  background: var(--ctp-overlay1);
-  font-weight: 600;
-}
-table tbody tr:nth-child(odd) td:first-child {
-  background: linear-gradient(to right, var(--ctp-overlay1) 80%, var(--ctp-overlay0));
-}
-
-/* Styles For Empty Cells */
+/* Empty cells */
 table tbody td:empty::before {
   content: '—';
   color: var(--at-tb-deco-color);
