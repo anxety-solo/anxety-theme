@@ -54,6 +54,11 @@
 
 
 /* GALLERY TAB */
+#SDHub-Gallery-Wrapper #SDHub-Gallery-Tab-Layer {
+  background: color-mix(in srgb, var(--ctp-mantle) 80%, transparent) !important;
+  backdrop-filter: blur(2px) !important;
+}
+
 .sdhub-gallery-img-name {
   backdrop-filter: blur(5px) !important;
   background: rgba(0, 0, 0, 0.3) !important;
@@ -86,7 +91,7 @@
 }
 
 /* Accordion */
-#SDHub-Tab .sdhub-accordion {
+#SDHub-Tab #SDHub-Tag-Accordion {
   border: 2px solid var(--border-color-primary) !important;
 }
 
@@ -96,11 +101,12 @@
   backdrop-filter: blur(8px) !important;
 }
 
+
 /* Exit button */
-#SDHub-Gallery-Setting-Exit-Button:hover {
+#SDHub-Gallery-Setting-Wrapper #SDHub-Gallery-Setting-Exit-Button:hover {
   background: var(--ctp-accent) !important;
 }
-#SDHub-Gallery-Setting-Exit-Button:hover svg {
+#SDHub-Gallery-Setting-Wrapper #SDHub-Gallery-Setting-Exit-Button:hover svg {
   color: var(--ctp-base2) !important;
 }
 
@@ -116,11 +122,11 @@
 }
 
 /* Apply button */
-#SDHub-Gallery-Setting-Apply-Button {
+#SDHub-Gallery-Setting-Wrapper #SDHub-Gallery-Setting-Apply-Button {
   color: var(--button-secondary-text-color) !important;
   background: var(--ctp-mantle) !important;
 }
-#SDHub-Gallery-Setting-Apply-Button:hover {
+#SDHub-Gallery-Setting-Wrapper #SDHub-Gallery-Setting-Apply-Button:hover {
   color: var(--button-primary-text-color) !important;
   background: var(--button-primary-background-fill) !important;
 }
