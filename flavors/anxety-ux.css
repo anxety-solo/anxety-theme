@@ -148,7 +148,7 @@ html, body { background: var(--ctp-mantle) !important; }
 a:hover { color: var(--ctp-accent) !important; }
 
 select:focus,
-input[type="search"]:focus {
+input[type='search']:focus {
   outline: none !important;
   border: 1px solid var(--ctp-surface1) !important;
 }
@@ -207,13 +207,13 @@ button.lg.secondary:hover {
   filter: brightness(125%);
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+input[type='radio'],
+input[type='checkbox'] {
   cursor: pointer;
   accent-color: var(--ctp-accent);
 }
-input[type="radio"]::after, /* check icon */
-input[type="checkbox"]::after {
+input[type='radio']::after, /* check icon */
+input[type='checkbox']::after {
   color: var(--button-primary-text-color);
 }
 

@@ -1,13 +1,11 @@
 import gradio as gr
 import shutil
 import re
-import os
 from pathlib import Path
 
 from modules.shared import OptionInfo, opts, cmd_opts
 from modules.script_callbacks import on_ui_settings
 from modules.scripts import basedir
-from modules import launch_utils
 
 
 # --- CONSTANTS ---

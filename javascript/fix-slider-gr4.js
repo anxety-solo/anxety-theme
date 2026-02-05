@@ -7,5 +7,5 @@ onUiLoaded(function () {
     }
     removeRangeClass();
 
-    console.log('[Anxety-Theme]: Range input class `svelte-pc1gm4` removed - Forge Slider Fixed.');
+    console.log('[Anxety-Theme]: Range input class `svelte-pc1gm4` removed - Forge Slider Fixed');
 });

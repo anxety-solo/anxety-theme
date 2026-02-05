@@ -108,7 +108,7 @@
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 /* Highlight only when parent div has color: lightblue */
-.resultsFlexContainer[style*="color: lightblue"] .acListItem b {
+.resultsFlexContainer[style*='color: lightblue'] .acListItem b {
   color: var(--ctp-accent) !important;
 }
 
