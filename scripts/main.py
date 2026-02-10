@@ -91,7 +91,7 @@ def select_base_css():
     """Select and return the appropriate base CSS file path"""
     if is_sd_ux():
         return SCRIPT_PATH / 'flavors/anxety-ux.css'
-    elif gr.__version__ >= '4.40.0':
+    elif gr.__version__ >= '4.0.0':
         return SCRIPT_PATH / 'flavors/anxety-gr4.css'
     else:
         return SCRIPT_PATH / 'flavors/anxety.css'
