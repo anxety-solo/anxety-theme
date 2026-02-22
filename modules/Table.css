@@ -19,8 +19,7 @@ table {
 
 /* Remove default borders */
 table,
-table th,
-table td {
+table * {
   border: none !important;
 }
 /* Vertical dividers */
