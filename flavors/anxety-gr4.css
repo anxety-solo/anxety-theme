@@ -471,14 +471,73 @@ input[type='range']:disabled::-moz-range-thumb {
 
 
 /* Style For ControlNet Integrated  */
-input[type='range'].svelte-4wk6so {
-  --thumb-width: initial;
-  --thumb-height: initial;
-  --track-height: initial;
-}
-
 input[type='number'].svelte-4wk6so.svelte-4wk6so {
     padding: var(--size-2) var(--size-4);
+}
+
+/* === ControlNet Integrated — Range Slider === */
+
+.controlnet_control_step_slider .range-slider {
+  --thumb-height: 0.5em;
+  --track-height: 0.125em;
+  font-size: 1.5rem;
+  position: relative;
+  flex: 1 1 auto;
+  height: var(--thumb-height) !important;
+  margin: 2px 0;
+}
+/* Min / max labels — vertically centered */
+.controlnet_control_step_slider .min_value,
+.controlnet_control_step_slider .max_value {
+  line-height: 1;
+}
+
+/* Base track */
+.controlnet_control_step_slider .range-bg {
+  position: absolute;
+  inset-inline: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: calc(var(--track-height) + 1px);
+  border-radius: var(--track-height);
+  background: var(--ctp-surface0);
+}
+/* Accent fill — only between the two thumbs */
+.controlnet_control_step_slider .range-line {
+  position: absolute ;
+  top: 50%;
+  transform: translateY(-50%);
+  height: calc(var(--track-height) + 1px) !important;
+  border-radius: var(--track-height);
+  background: var(--ctp-accent);
+}
+
+/* Stack both range inputs on top of each other */
+.controlnet_control_step_slider .range-slider input[type="range"] {
+  position: absolute;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* WebKit — remove built-in fill shadow and clip, keep only thumb shape */
+.controlnet_control_step_slider .range-slider input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+  box-shadow: none;
+  clip-path: none;
+  background: var(--ctp-accent);
+}
+.controlnet_control_step_slider .range-slider input[type="range"]::-webkit-slider-runnable-track {
+  background: transparent;
+}
+/* Firefox — remove built-in fill and progress */
+.controlnet_control_step_slider .range-slider input[type="range"]::-moz-range-thumb {
+  pointer-events: all;
+}
+.controlnet_control_step_slider .range-slider input[type="range"]::-moz-range-track {
+  background: transparent;
+}
+.controlnet_control_step_slider .range-slider input[type="range"]::-moz-range-progress {
+  background: transparent;
 }
 
 
