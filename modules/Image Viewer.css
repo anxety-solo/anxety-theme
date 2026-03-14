@@ -12,14 +12,14 @@
 /* Elements */
 #lightboxModal .modalPrev,
 #lightboxModal .modalNext {
-  background: var(--ctp-base0);
+  background: var(--at-base0);
   transition: all 0.2s ease;
 }
 #lightboxModal .modalPrev:hover,
 #lightboxModal .modalNext:hover {
-  background: var(--ctp-accent);
-  color: var(--ctp-base0) !important;
+  background: var(--at-accent);
+  color: var(--at-base0) !important;
 }
 #lightboxModal .modalControls > span:hover {
-  color: var(--ctp-accent);
+  color: var(--at-accent);
 }

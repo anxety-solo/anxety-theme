@@ -26,7 +26,7 @@
   min-width: var(--at-tc-width) !important;
   max-height: 100% !important;
   background: rgba(0, 0, 0, 0.1) !important;
-  border: 1px solid var(--ctp-surface1) !important;
+  border: 1px solid var(--at-surface1) !important;
   border-radius: var(--at-tc-border-radius) !important;
   backdrop-filter: var(--at-tc-blur);
   box-shadow: var(--at-tc-shadow) !important;
@@ -45,7 +45,7 @@
 .autocompleteResultsList li {
   margin: 4px var(--at-tc-item-padding) !important;
   padding: 0 var(--at-tc-item-padding) !important;
-  border: 1px solid var(--ctp-surface0) !important;
+  border: 1px solid var(--at-surface0) !important;
   border-radius: var(--at-tc-border-radius) !important;
   transition: all var(--at-tc-transition-speed) var(--at-tc-bezier);
 }
@@ -53,14 +53,14 @@
 /* Hover state for list items */
 .autocompleteResultsList li:hover {
   background: rgba(255, 255, 255, 0.08) !important;
-  border-color: var(--ctp-surface1) !important;
+  border-color: var(--at-surface1) !important;
   box-shadow: var(--at-tc-hover-shadow);
 }
 /* Selected item styling (keyboard navigation) */
 .autocompleteResultsList > li.selected {
   background: rgba(255, 255, 255, 0.12) !important;
-  border-color: var(--ctp-surface1) !important;
-  box-shadow: inset 2px 0 0 var(--ctp-accent), var(--at-tc-hover-shadow) !important;
+  border-color: var(--at-surface1) !important;
+  box-shadow: inset 2px 0 0 var(--at-accent), var(--at-tc-hover-shadow) !important;
   transform: translateX(2px);
 }
 
@@ -81,7 +81,7 @@
   height: 26px !important;
   background: rgba(255, 255, 255, 0.1);
   border-radius: calc(var(--at-tc-border-radius) - 2px) !important;
-  color: var(--ctp-subtext0) !important;
+  color: var(--at-subtext0) !important;
   text-decoration: none !important;
   align-items: center !important;
   justify-content: center !important;
@@ -89,8 +89,8 @@
 }
 /* Wiki link hover effects */
 .acWikiLink:hover {
-  background: var(--ctp-surface2) !important;
-  color: var(--ctp-accent) !important;
+  background: var(--at-surface2) !important;
+  color: var(--at-accent) !important;
   transform: scale(1.08) rotate(5deg);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
@@ -103,23 +103,23 @@
 }
 /* Highlight matching characters in search */
 .acListItem b {
-  /* color: var(--ctp-accent) !important; */
+  /* color: var(--at-accent) !important; */
   font-weight: 700 !important;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 /* Highlight only when parent div has color: lightblue */
 .resultsFlexContainer[style*='color: lightblue'] .acListItem b {
-  color: var(--ctp-accent) !important;
+  color: var(--at-accent) !important;
 }
 
 /* Meta text (count) styling */
 .acMetaText {
-  color: var(--ctp-subtext1) !important;
+  color: var(--at-subtext1) !important;
   transition: all var(--at-tc-transition-speed) ease;
 }
 /* Meta text hover state */
 li:hover .acMetaText {
-  color: var(--ctp-accent) !important;
+  color: var(--at-accent) !important;
 }
 
 /* Dropdown appear animation */

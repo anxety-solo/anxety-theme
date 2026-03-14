@@ -1,57 +1,57 @@
 :root {
   /* ACCENT COLOR | THEME STYLE */
-  --ctp-anxety: #db88ae;
-  --ctp-error: #ff6747;
-  --ctp-border-radius: 8px;
+  --at-anxety: #db88ae;
+  --at-error: #ff6747;
+  --at-border-radius: 8px;
 
-  --ctp-pink: #d9b8b8;
-  --ctp-red: #ff5252;
-  --ctp-peach: #f6d992;
-  --ctp-yellow: #e9d700;
-  --ctp-green: #77ab59;
-  --ctp-blue: #6d90c8;
+  --at-pink: #d9b8b8;
+  --at-red: #ff5252;
+  --at-peach: #f6d992;
+  --at-yellow: #e9d700;
+  --at-green: #77ab59;
+  --at-blue: #6d90c8;
 
   /* UI COLOR */
-  --ctp-text: #d1d5d7;
-  --ctp-subtext2: #939a9c;
-  --ctp-subtext1: #d3dce0;
-  --ctp-subtext0: #bbc2c6;
-  --ctp-overlay2: #242424;
-  --ctp-overlay1: #1c1c1c;
-  --ctp-overlay0: #141414;
-  --ctp-surface2: #475254;
-  --ctp-surface1: #3d4142;
-  --ctp-surface0: #22282a;
-  --ctp-base2: #232323;
-  --ctp-base1: #171717;
-  --ctp-base0: #131313;
+  --at-text: #d1d5d7;
+  --at-subtext2: #939a9c;
+  --at-subtext1: #d3dce0;
+  --at-subtext0: #bbc2c6;
+  --at-overlay2: #242424;
+  --at-overlay1: #1c1c1c;
+  --at-overlay0: #141414;
+  --at-surface2: #475254;
+  --at-surface1: #3d4142;
+  --at-surface0: #22282a;
+  --at-base2: #232323;
+  --at-base1: #171717;
+  --at-base0: #131313;
 
-  --ctp-mantle: #0b0b0b;
+  --at-mantle: #0b0b0b;
   --shadow: #010409;
 
-  --ctp-accent: var(--ctp-anxety);
+  --at-accent: var(--at-anxety);
   color-scheme: dark;
 }
 
 :root, .dark {
   /* Basic colors and background */
-  --color-accent: var(--ctp-accent);
+  --color-accent: var(--at-accent);
 
   --body-background-fill: var(--background-fill-primary);
-  --body-text-color: var(--ctp-subtext0);
-  --body-text-color-subdued: var(--ctp-subtext2);
-  --background-fill-primary: var(--ctp-mantle);
-  --background-fill-secondary: var(--ctp-base0);
-  --color-accent-soft: var(--ctp-surface0);
+  --body-text-color: var(--at-subtext0);
+  --body-text-color-subdued: var(--at-subtext2);
+  --background-fill-primary: var(--at-mantle);
+  --background-fill-secondary: var(--at-base0);
+  --color-accent-soft: var(--at-surface0);
   /* Borders */
-  --border-color-accent: var(--ctp-surface0);
-  --border-color-primary: var(--ctp-surface0);
+  --border-color-accent: var(--at-surface0);
+  --border-color-primary: var(--at-surface0);
   --border-color-accent-subdued: var(--border-color-accent);
   /* Links */
-  --link-text-color: var(--ctp-subtext0);
-  --link-text-color-hover: var(--ctp-accent);
-  --link-text-color-active: var(--ctp-subtext0);
-  --link-text-color-visited: var(--ctp-subtext0);
+  --link-text-color: var(--at-subtext0);
+  --link-text-color-hover: var(--at-accent);
+  --link-text-color-active: var(--at-subtext0);
+  --link-text-color-visited: var(--at-subtext0);
   /* Blocks */
   --block-background-fill: var(--background-fill-primary);
   --block-border-color: var(--border-color-primary);
@@ -60,8 +60,8 @@
   --block-label-background-fill: var(--background-fill-secondary);
   --block-label-border-color: var(--border-color-primary);
   --block-label-border-width: none;
-  --block-label-text-color: var(--ctp-text);
-  --block-title-text-color: var(--ctp-text);
+  --block-label-text-color: var(--at-text);
+  --block-title-text-color: var(--at-text);
   --block-shadow: none;
   --block-title-background-fill: none;
   --block-title-border-color: none;
@@ -71,23 +71,23 @@
   --panel-border-color: var(--border-color-primary);
   --panel-border-width: none;
   /* Tables */
-  --table-border-color: var(--ctp-surface1);
-  --table-even-background-fill: var(--ctp-base1);
-  --table-odd-background-fill: var(--ctp-base2);
+  --table-border-color: var(--at-surface1);
+  --table-even-background-fill: var(--at-base1);
+  --table-odd-background-fill: var(--at-base2);
   --table-row-focus: var(--color-accent-soft);
   /* Checkboxes */
-  --checkbox-background-color: var(--ctp-surface1);
+  --checkbox-background-color: var(--at-surface1);
   --checkbox-background-color-focus: var(--checkbox-background-color);
-  --checkbox-background-color-hover: var(--ctp-surface2);
-  --checkbox-background-color-selected: var(--ctp-accent);
-  --checkbox-border-color: var(--ctp-surface2);
+  --checkbox-background-color-hover: var(--at-surface2);
+  --checkbox-background-color-selected: var(--at-accent);
+  --checkbox-border-color: var(--at-surface2);
   --checkbox-border-color-focus: transparent;;
   --checkbox-border-color-hover: transparent;
   --checkbox-border-color-selected: transparent;
   --checkbox-border-width: var(--input-border-width);
-  --checkbox-label-background-fill: var(--ctp-surface0);
+  --checkbox-label-background-fill: var(--at-surface0);
   --checkbox-label-background-fill-hover: var(--checkbox-label-background-fill);
-  --checkbox-label-background-fill-selected: var(--ctp-surface1);
+  --checkbox-label-background-fill-selected: var(--at-surface1);
   --checkbox-label-border-color: var(--border-color-primary);
   --checkbox-label-border-color-hover: var(--checkbox-label-border-color);
   --checkbox-label-border-width: var(--input-border-width);
@@ -95,68 +95,68 @@
   --checkbox-label-text-color-selected: var(--checkbox-label-text-color);
   /* Errors */
   --error-background-fill: var(--background-fill-primary);
-  --error-border-color: var(--ctp-accent);
+  --error-border-color: var(--at-accent);
   --error-border-width: none;
-  --error-text-color: var(--ctp-text);
-  --error-icon-color: var(--ctp-accent);
+  --error-text-color: var(--at-text);
+  --error-icon-color: var(--at-accent);
   /* Inputs */
-  --input-background-fill: var(--ctp-base1);
+  --input-background-fill: var(--at-base1);
   --input-background-fill-focus: var(--input-background-fill);
   --input-background-fill-hover: var(--input-background-fill);
   --input-border-color: var(--border-color-primary);
-  --input-border-color-focus: var(--ctp-surface1);
+  --input-border-color-focus: var(--at-surface1);
   --input-border-color-hover: var(--input-border-color);
   --input-border-width: 1px;
-  --input-placeholder-color: var(--ctp-surface1);
+  --input-placeholder-color: var(--at-surface1);
   --input-shadow: none;
-  --input-shadow-focus: 0 0 0 var(--shadow-spread) var(--ctp-surface1), var(--shadow-inset);
+  --input-shadow-focus: 0 0 0 var(--shadow-spread) var(--at-surface1), var(--shadow-inset);
   /* Buttons */
   --button-border-width: var(--input-border-width);
-  --button-cancel-background-fill: var(--ctp-red);
+  --button-cancel-background-fill: var(--at-red);
   --button-cancel-background-fill-hover: var(--button-cancel-background-fill);
-  --button-cancel-border-color: var(--ctp-red);
+  --button-cancel-border-color: var(--at-red);
   --button-cancel-border-color-hover: var(--button-cancel-border-color);
-  --button-cancel-text-color: var(--ctp-base0);
+  --button-cancel-text-color: var(--at-base0);
   --button-cancel-text-color-hover: var(--button-cancel-text-color);
-  --button-primary-background-fill: var(--ctp-accent);
+  --button-primary-background-fill: var(--at-accent);
   --button-primary-background-fill-hover: var(--button-primary-background-fill);
-  --button-primary-border-color: var(--ctp-accent);
+  --button-primary-border-color: var(--at-accent);
   --button-primary-border-color-hover: var(--button-primary-border-color);
-  --button-primary-text-color: var(--ctp-base0);
+  --button-primary-text-color: var(--at-base0);
   --button-primary-text-color-hover: var(--button-primary-text-color);
-  --button-secondary-background-fill: var(--ctp-surface0);
+  --button-secondary-background-fill: var(--at-surface0);
   --button-secondary-background-fill-hover: var(--button-secondary-background-fill);
-  --button-secondary-border-color: var(--ctp-surface0);
+  --button-secondary-border-color: var(--at-surface0);
   --button-secondary-border-color-hover: var(--button-secondary-border-color);
-  --button-secondary-text-color: var(--ctp-text);
+  --button-secondary-text-color: var(--at-text);
   --button-secondary-text-color-hover: var(--button-secondary-text-color);
   /* Others */
   --shadow-spread: none;
   --chatbot-code-background-color: var(--background-fill-primary);
-  --stat-background-fill: var(--ctp-surface1);
+  --stat-background-fill: var(--at-surface1);
   --loader-color: var(--color-accent);
-  --slider-color: var(--ctp-accent);
+  --slider-color: var(--at-accent);
 
   /* Params */
-  --neutral-900: var(--ctp-base1);
-  --neutral-950: var(--ctp-mantle);
+  --neutral-900: var(--at-base1);
+  --neutral-950: var(--at-mantle);
 }
 
 /* HTML */
-html, body { background: var(--ctp-mantle) !important; }
-a:hover { color: var(--ctp-accent) !important; }
+html, body { background: var(--at-mantle) !important; }
+a:hover { color: var(--at-accent) !important; }
 
 select:focus,
 input[type='search']:focus {
   outline: none !important;
-  border: 1px solid var(--ctp-surface1) !important;
+  border: 1px solid var(--at-surface1) !important;
 }
 
 ::selection {
-  background: var(--ctp-surface1);
+  background: var(--at-surface1);
 }
 ::-moz-selection { /* Code for Firefox */
-  background: var(--ctp-surface1);
+  background: var(--at-surface1);
 }
 
 /* Hide text-field arrows */
@@ -175,7 +175,7 @@ input[type='number'] {
 /* Gradio Fiches */
 /* Rounded Gradio Elements */
 .gradio-row, .wrap, label, .block, .lg, .primary, .secondary, .gradio-button {
-  border-radius: var(--ctp-border-radius) !important;
+  border-radius: var(--at-border-radius) !important;
 }
 .wrap, label, .block { gap: 4px !important; }
 
@@ -185,13 +185,13 @@ input[type='number'] {
 #img2img_extra_tabs > .tab-nav > button.selected,
 #mode_img2img > .tab-nav > button.selected,
 #tabs .gradio-tabs > .tab-nav > button.selected {
-  color: var(--ctp-accent);
+  color: var(--at-accent);
 }
 
 /* Selected items (tokens) in multi-select dropdown */
 .wrap-inner { gap: 4px !important; }
 .wrap-inner > div.token {
-  border-radius: var(--ctp-border-radius) !important;
+  border-radius: var(--at-border-radius) !important;
   padding: 4px 8px !important;
 }
 
@@ -209,7 +209,7 @@ button.lg.secondary:hover {
 input[type='radio'],
 input[type='checkbox'] {
   cursor: pointer;
-  accent-color: var(--ctp-accent);
+  accent-color: var(--at-accent);
 }
 
 
@@ -218,14 +218,14 @@ input[type='checkbox'] {
 .gradio-button.generate-box-skip,
 .gradio-button.generate-box-interrupt,
 .gradio-button.generate-box-interrupting {
-  color: var(--ctp-base0) !important;
+  color: var(--at-base0) !important;
   transition: all 0.1s ease;
   border: none;
 }
 
 .gradio-button.generate-box-skip,
 .gradio-button.generate-box-interrupt {
-  background: var(--ctp-accent) !important;
+  background: var(--at-accent) !important;
 }
 .gradio-button.generate-box-skip:hover,
 .gradio-button.generate-box-interrupt:hover {
@@ -233,18 +233,18 @@ input[type='checkbox'] {
 }
 
 .gradio-button.generate-box-interrupting {
-  background: var(--ctp-error) !important;
+  background: var(--at-error) !important;
 }
 
 /* Button borders and borders radius */
 #txt2img_skip, #img2img_skip {
-  border-left: solid 2px var(--ctp-base0); /* Separation line of Interrupt & Skip buttons */
-  border-radius: 0 var(--ctp-border-radius) var(--ctp-border-radius) 0 !important;
+  border-left: solid 2px var(--at-base0); /* Separation line of Interrupt & Skip buttons */
+  border-radius: 0 var(--at-border-radius) var(--at-border-radius) 0 !important;
 }
 
 #txt2img_interrupt, #img2img_interrupt,
 #txt2img_interrupting, #img2img_interrupting {
-  border-radius: var(--ctp-border-radius) 0 0 var(--ctp-border-radius) !important;
+  border-radius: var(--at-border-radius) 0 0 var(--at-border-radius) !important;
 }
 
 
@@ -254,12 +254,12 @@ input[type='checkbox'] {
 }
 
 .progressDiv .progress {
-  background: var(--ctp-accent);
+  background: var(--at-accent);
   color: var(--shadow);
 }
 .dark .progressDiv,
 .progressDiv {
-  background: var(--ctp-surface0);
+  background: var(--at-surface0);
 }
 
 .block.gradio-gallery {
@@ -281,16 +281,16 @@ input[type='checkbox'] {
 /* Menu when right-clicking on the “Generate” button */
 #context-menu {
   box-shadow: none;
-  border-color: var(--ctp-surface2);
-  border-radius: var(--ctp-border-radius) !important;
+  border-color: var(--at-surface2);
+  border-radius: var(--at-border-radius) !important;
 }
 .context-menu-items a {
-  background: var(--ctp-base1);
-  border-radius: var(--ctp-border-radius) !important;
+  background: var(--at-base1);
+  border-radius: var(--at-border-radius) !important;
 }
 .context-menu-items a:hover {
-  color: var(--ctp-text) !important;
-  background: var(--ctp-surface0);
+  color: var(--at-text) !important;
+  background: var(--at-surface0);
 }
 
 
@@ -303,14 +303,14 @@ input[type='range'] {
   color: var(--accent);
   --thumb-height: 0.5em;
   --track-height: 0.125em;
-  --track-color: var(--ctp-surface0);
+  --track-color: var(--at-surface0);
   --brightness-hover: 130%;
   --brightness-down: 80%;
   --clip-edges: 0.125em;
 }
 
 input[type='range'].win10-thumb {
-  color: var(--ctp-accent);
+  color: var(--at-accent);
 
   --thumb-height: 0.5em;
   --thumb-width: 0.5em;
@@ -319,12 +319,12 @@ input[type='range'].win10-thumb {
 
 @media (prefers-color-scheme: dark) {
   input[type='range'] {
-    color: var(--ctp-accent);
-    --track-color: var(--ctp-surface0);
+    color: var(--at-accent);
+    --track-color: var(--at-surface0);
   }
 
   input[type='range'].win10-thumb {
-    color: var(--ctp-accent);
+    color: var(--at-accent);
   }
 }
 

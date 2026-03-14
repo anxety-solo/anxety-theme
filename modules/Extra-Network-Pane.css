@@ -3,7 +3,7 @@
   /* Effects */
   --at-enp-blur: blur(10px);
   --at-enp-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --at-enp-card-hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.12), 0 0 0 2px var(--ctp-accent);
+  --at-enp-card-hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.12), 0 0 0 2px var(--at-accent);
 
   /* Card Styles */
   /* --at-enp-card-width: 200px; */
@@ -91,9 +91,9 @@
 .goto-civitbrowser.card-button:hover svg path,
 .extra-network-pane .card .card-button:hover svg,
 .extra-network-pane .card .button-row > .card-button:hover {
-  fill: var(--ctp-accent);
-  filter: drop-shadow(0 0 2px rgba(var(--ctp-accent-rgb), 0.5));
-  color: var(--ctp-accent);
+  fill: var(--at-accent);
+  filter: drop-shadow(0 0 2px rgba(var(--at-accent-rgb), 0.5));
+  color: var(--at-accent);
 }
 
 /* --- Name/Title Block Styles --- */
@@ -117,7 +117,7 @@
   color: white;
   font-size: var(--at-enp-card-text-size) !important;
   background: var(--at-enp-name-bg);
-  border: 1px solid var(--ctp-overlay2);
+  border: 1px solid var(--at-overlay2);
   border-radius: 20px;
   backdrop-filter: var(--at-enp-name-bg-blur);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);

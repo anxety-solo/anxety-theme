@@ -4,9 +4,9 @@
 /* Change Gradio Color to Accent */
 :root,
 .dark {
-  --primary-400: var(--ctp-accent) !important;
-  --primary-500: var(--ctp-accent) !important;
-  --primary-600: var(--ctp-surface1) !important;
+  --primary-400: var(--at-accent) !important;
+  --primary-500: var(--at-accent) !important;
+  --primary-600: var(--at-surface1) !important;
 }
 
 /* GLOBAL RESETS */
@@ -20,9 +20,9 @@
 
 /* TAB NAVIGATION */
 #tab_SDHub .tab-nav > button.selected {
-  background: var(--ctp-base0) !important;
-  border-color: color-mix(in srgb, var(--ctp-accent) 80%, transparent) !important;
-  box-shadow: 0 0 8px -2px var(--ctp-accent) !important;
+  background: var(--at-base0) !important;
+  border-color: color-mix(in srgb, var(--at-accent) 80%, transparent) !important;
+  box-shadow: 0 0 8px -2px var(--at-accent) !important;
 }
 
 #tab_SDHub .tab-nav > button:not(.selected) {
@@ -55,7 +55,7 @@
 
 /* GALLERY TAB */
 #SDHub-Gallery-Wrapper #SDHub-Gallery-Tab-Layer {
-  background: color-mix(in srgb, var(--ctp-mantle) 80%, transparent) !important;
+  background: color-mix(in srgb, var(--at-mantle) 80%, transparent) !important;
   backdrop-filter: blur(2px) !important;
 }
 
@@ -70,7 +70,7 @@
 
 #SDHub-Gallery-Tab-Button-Row > button:not(.selected) {
   color: var(--button-secondary-text-color) !important;
-  background: var(--ctp-mantle) !important;
+  background: var(--at-mantle) !important;
 }
 #SDHub-Gallery-Tab-Button-Row > button:hover:not(.selected) {
   box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.15) !important;
@@ -79,15 +79,15 @@
 
 /* Gallery page navigation */
 #SDHub-Gallery-Setting-Nav > span {
-  background: var(--ctp-mantle) !important;
+  background: var(--at-mantle) !important;
 }
 #SDHub-Gallery-Setting-Nav:hover > span {
-  background: var(--ctp-base0) !important;
+  background: var(--at-base0) !important;
 }
 
 .sdhub-gallery-page-nav .sdhub-gallery-tab-image-counter,
 .sdhub-gallery-page-nav .sdhub-gallery-page-indicator {
-  background: var(--ctp-mantle) !important;
+  background: var(--at-mantle) !important;
 }
 
 /* Accordion */
@@ -104,27 +104,27 @@
 
 /* Exit button */
 #SDHub-Gallery-Setting-Wrapper #SDHub-Gallery-Setting-Exit-Button:hover {
-  background: var(--ctp-accent) !important;
+  background: var(--at-accent) !important;
 }
 #SDHub-Gallery-Setting-Wrapper #SDHub-Gallery-Setting-Exit-Button:hover svg {
-  color: var(--ctp-base2) !important;
+  color: var(--at-base2) !important;
 }
 
 /* Inputs */
 #SDHub-Gallery-Setting-Wrapper input {
-  border: 2px solid var(--ctp-surface1) !important;
+  border: 2px solid var(--at-surface1) !important;
 }
 #SDHub-Gallery-Setting-Wrapper input:hover {
-  border-color: var(--ctp-surface2) !important;
+  border-color: var(--at-surface2) !important;
 }
 #SDHub-Gallery-Setting-Wrapper input:focus {
-  border-color: var(--ctp-accent) !important;
+  border-color: var(--at-accent) !important;
 }
 
 /* Apply button */
 #SDHub-Gallery-Setting-Wrapper #SDHub-Gallery-Setting-Apply-Button {
   color: var(--button-secondary-text-color) !important;
-  background: var(--ctp-mantle) !important;
+  background: var(--at-mantle) !important;
 }
 #SDHub-Gallery-Setting-Wrapper #SDHub-Gallery-Setting-Apply-Button:hover {
   color: var(--button-primary-text-color) !important;
@@ -133,10 +133,10 @@
 
 /* Checkboxes */
 .sdhub-gallery-setting-checkbox-input {
-  background: var(--ctp-surface1) !important;
+  background: var(--at-surface1) !important;
 }
 .sdhub-gallery-setting-checkbox-input:checked {
-  background: var(--ctp-accent) !important;
+  background: var(--at-accent) !important;
 }
 
 

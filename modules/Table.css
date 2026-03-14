@@ -25,7 +25,7 @@ table * {
 /* Vertical dividers */
 table th,
 table td {
-  border-right: 1px solid var(--ctp-base2) !important;
+  border-right: 1px solid var(--at-base2) !important;
 }
 /* Remove divider on last column */
 table th:last-child,
@@ -36,7 +36,7 @@ table td:last-child {
 /* Header */
 table thead th {
   padding: var(--at-tb-padding) !important;
-  background: var(--ctp-base1);
+  background: var(--at-base1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
@@ -46,17 +46,17 @@ table thead th {
 /* Body cells */
 table tbody td {
   padding: var(--at-tb-padding) !important;
-  background: var(--ctp-overlay0);
+  background: var(--at-overlay0);
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
   font-size: var(--at-tb-font-size) !important;
   line-height: 1.3;
 }
 /* Alternating rows */
 table tbody tr:nth-child(even) td {
-  background: var(--ctp-overlay1);
+  background: var(--at-overlay1);
 }
 table tbody tr:hover td {
-  background: var(--ctp-base2);
+  background: var(--at-base2);
 }
 
 /* First column emphasis */
