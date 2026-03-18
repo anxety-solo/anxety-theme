@@ -108,16 +108,16 @@ def update_accent_in_css():
             accent_value = validated_hex
             logger.info(f"Using custom hex color: {validated_hex}")
         else:
-            accent_value = f"var(--ctp-{current_accent})"
+            accent_value = f"var(--at-{current_accent})"
             logger.warning(f"Invalid hex color '{custom_hex}'. Using predefined accent '{current_accent}'.")
     else:
-        accent_value = f"var(--ctp-{current_accent})"
+        accent_value = f"var(--at-{current_accent})"
 
     with open(STYLE_CSS, 'r+') as file:
-        pattern = re.compile(r'--ctp-accent:\s*(.*)')
+        pattern = re.compile(r'--at-accent:\s*(.*)')
         text = re.sub(
             pattern,
-            f"--ctp-accent: {accent_value};",
+            f"--at-accent: {accent_value};",
             file.read(),
             count=1,
         )
