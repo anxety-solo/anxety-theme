@@ -207,6 +207,10 @@ button.lg.secondary:hover {
   filter: brightness(125%);
 }
 
+button.lg.compact {
+  background-color: var(--button-secondary-background-fill) !important;
+}
+
 input[type='radio'],
 input[type='checkbox'] {
   cursor: pointer;
