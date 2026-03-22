@@ -299,7 +299,6 @@ input[type=range] {
     width: 100%;
     accent-color: var(--slider-color);
 }
-
 input[type='range'] {
   font-size: 1.5rem;
 }
@@ -470,11 +469,6 @@ input[type='range']:disabled::-moz-range-thumb {
 }
 
 
-/* Style For ControlNet Integrated  */
-input[type='number'].svelte-4wk6so.svelte-4wk6so {
-    padding: var(--size-2) var(--size-4);
-}
-
 /* === ControlNet Integrated — Range Slider === */
 
 .controlnet_control_step_slider .range-slider {
@@ -486,7 +480,7 @@ input[type='number'].svelte-4wk6so.svelte-4wk6so {
   height: var(--thumb-height) !important;
   margin: 2px 0;
 }
-/* Min / max labels — vertically centered */
+/* Min / Max labels — vertically centered */
 .controlnet_control_step_slider .min_value,
 .controlnet_control_step_slider .max_value {
   line-height: 1;

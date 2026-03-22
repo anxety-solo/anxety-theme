@@ -283,6 +283,10 @@ button.lg.tool::after {
 
 
 /* === SLIDERS STYLE === */
+input[type=range] {
+    width: 100%;
+    accent-color: var(--slider-color);
+}
 input[type='range'] {
   font-size: 1.5rem;
 }
