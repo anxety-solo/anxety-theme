@@ -9,7 +9,7 @@ from modules.scripts import basedir
 
 
 # --- CONSTANTS ---
-SECTION = ('ctp', 'Anxety-Theme')
+SECTION = ('at', 'Anxety-Theme')
 ACCENTS = (
     'anxety',    # Main Accent
     'blue',
@@ -150,8 +150,8 @@ def handle_cmd_accent():
 
 
 def apply_theme():
-    # Check if theme is disabled
-    if getattr(opts, 'at_disable_theme', False):
+    # Check if theme is enabled
+    if not getattr(opts, 'at_enable_theme', True):
         with open(STYLE_CSS, 'w') as file:
             file.write('/* Anxety-Theme */\n')
         logger.info('Theme disabled :c')
@@ -165,18 +165,18 @@ def apply_theme():
 
 def on_settings():
     """Create settings UI elements"""
-    # Theme disable option
+    # Theme enable option
     opts.add_option(
-        'at_disable_theme',
+        'at_enable_theme',
         OptionInfo(
-            default=False,
-            label='Disable Theme',
+            default=True,
+            label='Enable Theme',
             component=gr.Checkbox,
             component_args={},
             onchange=apply_theme,
             section=SECTION,
             category_id='ui',
-        ).info('When enabled, the theme will be disabled')
+        ).info('When disabled, the theme will be turned off')
     )
 
     # Accent color selection
@@ -200,7 +200,7 @@ def on_settings():
             default='',
             label='Custom Hex Color',
             component=gr.Textbox,
-            component_args={'placeholder': 'Enter hex color (e.g. #ff00ff, #123abc, #FАА)'},
+            component_args={'placeholder': 'Enter hex color (e.g. #ff00ff, #123abc, #FAA)'},
             onchange=update_accent_in_css,
             section=SECTION,
             category_id='ui',
