@@ -37,6 +37,8 @@
 
 The theme also **modifies the style and design** of several Stable Diffusion WebUI extensions, providing a consistent and visually appealing user experience throughout the interface. Specifically, it supports:
 
+- **ControlNet (Integrated)**: The theme customizes the buttons for a cleaner UI.
+
 - **SD-Hub**: The theme adapts its UI elements to match the overall dark aesthetic.
   </br>[GitHub - gutris1/sd-hub](https://github.com/gutris1/sd-hub)
 

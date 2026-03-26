@@ -1,0 +1,63 @@
+/* === Awesome CN btn-style~ === */
+#controlnet .gradio-row {
+  display: flex;
+  align-items: center;
+}
+#controlnet .gradio-row:has(.cnet-toolbutton + .cnet-toolbutton) {
+  gap: 8px;
+}
+
+#controlnet .gradio-button {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
+  background-color: var(--button-secondary-background-fill) !important;
+}
+#controlnet .cnet-image-row .gradio-button,
+#controlnet .controlnet_image_controls .gradio-button {
+  margin-bottom: 0 !important;
+}
+
+
+/* === ControlNet Integrated — Control Type Chips === */
+.controlnet_control_type_filter_group .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 6px !important;
+  padding: 2px 8px;
+}
+
+/* Chips */
+.controlnet_control_type_filter_group label {
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  border: 1px solid var(--border-color-primary) !important;
+  background: var(--input-background-fill) !important;
+  color: var(--body-text-color-subdued) !important;
+  transition: all 0.12s !important;
+}
+.controlnet_control_type_filter_group label:hover {
+  background: var(--background-fill-secondary) !important;
+  border-color: var(--at-surface2) !important;
+  color: var(--body-text-color) !important;
+}
+
+/* Active Chips */
+.controlnet_control_type_filter_group label:has(input[aria-checked="true"]),
+.controlnet_control_type_filter_group label.selected {
+  background: var(--color-accent-soft) !important;
+  border-color: var(--at-accent) !important;
+  color: var(--at-text) !important;
+  font-weight: 500 !important;
+}
+
+/* Label "Control Type" */
+.controlnet_control_type_filter_group > span[data-testid="block-info"] {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--block-info-text-color);
+  margin-bottom: 6px;
+  display: block !important;
+}
