@@ -21,43 +21,60 @@
 
 
 /* === ControlNet Integrated — Control Type Chips === */
-.controlnet_control_type_filter_group .wrap {
+/* Fieldset: flex col */
+[id*="controlnet_type_filter_radio"].controlnet_control_type_filter_group {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 8px !important;
+  gap: 16px !important;
+}
+
+/* Label "Control Type" */
+[id*="controlnet_type_filter_radio"] > span[data-testid="block-info"] {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--block-info-text-color) !important;
+  font-size: 12px !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1 !important;
+}
+
+/* Chips Wrap */
+[id*="controlnet_type_filter_radio"] .wrap:not(.hide) {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin: 0 !important;
+  padding: 0 !important;
   gap: 8px 6px !important;
-  padding: 2px 8px;
 }
 
 /* Chips */
-.controlnet_control_type_filter_group label {
+[id*="controlnet_type_filter_radio"] .wrap:not(.hide) label {
+  display: inline-flex !important;
+  align-items: center !important;
   padding: 4px 12px !important;
-  border-radius: 999px !important;
-  border: 1px solid var(--border-color-primary) !important;
   background: var(--input-background-fill) !important;
+  border: 1px solid var(--border-color-primary) !important;
+  border-radius: 16px !important;
   color: var(--body-text-color-subdued) !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
   transition: all 0.12s !important;
 }
-.controlnet_control_type_filter_group label:hover {
+[id*="controlnet_type_filter_radio"] .wrap:not(.hide) label:hover {
   background: var(--background-fill-secondary) !important;
   border-color: var(--at-surface2) !important;
   color: var(--body-text-color) !important;
 }
 
 /* Active Chips */
-.controlnet_control_type_filter_group label:has(input[aria-checked="true"]),
-.controlnet_control_type_filter_group label.selected {
+[id*="controlnet_type_filter_radio"] .wrap:not(.hide) label.selected,
+[id*="controlnet_type_filter_radio"] .wrap:not(.hide) label:has(input[aria-checked="true"]) {
   background: var(--color-accent-soft) !important;
   border-color: var(--at-accent) !important;
   color: var(--at-text) !important;
-  font-weight: 500 !important;
-}
-
-/* Label "Control Type" */
-.controlnet_control_type_filter_group > span[data-testid="block-info"] {
-  font-size: 12px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--block-info-text-color);
-  margin-bottom: 6px;
-  display: block !important;
 }
