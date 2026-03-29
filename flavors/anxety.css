@@ -3,6 +3,7 @@
   --at-anxety: #db88ae;
   --at-error: #ff6747;
   --at-border-radius: 8px;
+  --at-border-width: 1px;
 
   --at-pink: #d9b8b8;
   --at-red: #ff5252;
@@ -27,7 +28,7 @@
   --at-base0: #131313;
 
   --at-mantle: #0b0b0b;
-  --shadow: #010409;
+  --at-shadow: #010409;
 
   --at-accent: var(--at-anxety);
   color-scheme: dark;
@@ -36,91 +37,89 @@
 :root, .dark {
   /* Basic colors and background */
   --color-accent: var(--at-accent);
+  --color-accent-soft: var(--at-surface0);
 
+  /* Shadows */
+  --shadow-spread: none;
+  --shadow-drop: none;
+  --shadow-drop-lg: none;
+  --shadow-inset: none;
+
+  /* Backgrounds */
+  --background-fill-primary: var(--at-mantle);
+  --background-fill-secondary: var(--at-base0);
   --body-background-fill: var(--background-fill-primary);
   --body-text-color: var(--at-subtext0);
   --body-text-color-subdued: var(--at-subtext2);
-  --background-fill-primary: var(--at-mantle);
-  --background-fill-secondary: var(--at-base0);
-  --color-accent-soft: var(--at-surface0);
   /* Borders */
-  --border-color-accent: var(--at-surface0);
   --border-color-primary: var(--at-surface0);
+  --border-color-accent: var(--at-surface0);
   --border-color-accent-subdued: var(--border-color-accent);
   /* Links */
   --link-text-color: var(--at-subtext0);
-  --link-text-color-hover: var(--at-accent);
-  --link-text-color-active: var(--at-subtext0);
-  --link-text-color-visited: var(--at-subtext0);
+  --link-text-color-hover: var(--color-accent);
+  --link-text-color-active: var(--link-text-color);
+  --link-text-color-visited: var(--link-text-color);
   /* Blocks */
   --block-background-fill: var(--background-fill-primary);
   --block-border-color: var(--border-color-primary);
   --block-border-width: none;
+  --block-shadow: none;
   --block-info-text-color: var(--body-text-color-subdued);
   --block-label-background-fill: var(--background-fill-secondary);
   --block-label-border-color: var(--border-color-primary);
   --block-label-border-width: none;
   --block-label-text-color: var(--at-text);
-  --block-title-text-color: var(--at-text);
-  --block-shadow: none;
   --block-title-background-fill: none;
   --block-title-border-color: none;
   --block-title-border-width: none;
+  --block-title-text-color: var(--at-text);
   /* Panels */
   --panel-background-fill: var(--background-fill-secondary);
   --panel-border-color: var(--border-color-primary);
   --panel-border-width: none;
-  /* Tables */
-  --table-border-color: var(--at-surface1);
-  --table-even-background-fill: var(--at-base1);
-  --table-odd-background-fill: var(--at-base2);
-  --table-row-focus: var(--color-accent-soft);
+  /* Inputs */
+  --input-background-fill: var(--at-base1);
+  --input-background-fill-hover: var(--input-background-fill);
+  --input-background-fill-focus: var(--input-background-fill);
+  --input-border-color: var(--border-color-primary);
+  --input-border-color-hover: var(--input-border-color);
+  --input-border-color-focus: var(--at-surface1);
+  --input-border-width: var(--at-border-width);
+  --input-shadow: none;
+  --input-placeholder-color: var(--at-surface1);
   /* Checkboxes */
   --checkbox-background-color: var(--at-surface1);
-  --checkbox-background-color-focus: var(--checkbox-background-color);
   --checkbox-background-color-hover: var(--at-surface2);
-  --checkbox-background-color-selected: var(--at-accent);
+  --checkbox-background-color-focus: var(--checkbox-background-color);
+  --checkbox-background-color-selected: var(--color-accent);
   --checkbox-border-color: var(--at-surface2);
-  --checkbox-border-color-focus: transparent;;
   --checkbox-border-color-hover: transparent;
+  --checkbox-border-color-focus: transparent;
   --checkbox-border-color-selected: transparent;
-  --checkbox-border-width: var(--input-border-width);
+  --checkbox-border-width: var(--at-border-width);
+  --checkbox-check: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='--at-mantle' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+  --radio-circle: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='--at-mantle' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
   --checkbox-label-background-fill: var(--at-surface0);
   --checkbox-label-background-fill-hover: var(--checkbox-label-background-fill);
   --checkbox-label-background-fill-selected: var(--at-surface1);
   --checkbox-label-border-color: var(--border-color-primary);
   --checkbox-label-border-color-hover: var(--checkbox-label-border-color);
-  --checkbox-label-border-width: var(--input-border-width);
+  --checkbox-label-border-width: var(--at-border-width);
+  --checkbox-label-gap: 4px;
   --checkbox-label-text-color: var(--body-text-color);
   --checkbox-label-text-color-selected: var(--checkbox-label-text-color);
   /* Errors */
   --error-background-fill: var(--background-fill-primary);
-  --error-border-color: var(--at-accent);
+  --error-border-color: var(--color-accent);
   --error-border-width: none;
   --error-text-color: var(--at-text);
-  --error-icon-color: var(--at-accent);
-  /* Inputs */
-  --input-background-fill: var(--at-base1);
-  --input-background-fill-focus: var(--input-background-fill);
-  --input-background-fill-hover: var(--input-background-fill);
-  --input-border-color: var(--border-color-primary);
-  --input-border-color-focus: var(--at-surface1);
-  --input-border-color-hover: var(--input-border-color);
-  --input-border-width: 1px;
-  --input-placeholder-color: var(--at-surface1);
-  --input-shadow: none;
-  --input-shadow-focus: 0 0 0 var(--shadow-spread) var(--at-surface1), var(--shadow-inset);
+  --error-icon-color: var(--color-accent);
   /* Buttons */
-  --button-border-width: var(--input-border-width);
-  --button-cancel-background-fill: var(--at-red);
-  --button-cancel-background-fill-hover: var(--button-cancel-background-fill);
-  --button-cancel-border-color: var(--at-red);
-  --button-cancel-border-color-hover: var(--button-cancel-border-color);
-  --button-cancel-text-color: var(--at-base0);
-  --button-cancel-text-color-hover: var(--button-cancel-text-color);
-  --button-primary-background-fill: var(--at-accent);
-  --button-primary-background-fill-hover: var(--button-primary-background-fill);
-  --button-primary-border-color: var(--at-accent);
+  --button-border-width: var(--at-border-width);
+  --button-primary-background-fill: var(--color-accent);
+  --button-primary-background-fill-hover:  var(--button-primary-background-fill);
+  --button-primary-border-color: var(--color-accent);
   --button-primary-border-color-hover: var(--button-primary-border-color);
   --button-primary-text-color: var(--at-base0);
   --button-primary-text-color-hover: var(--button-primary-text-color);
@@ -130,12 +129,24 @@
   --button-secondary-border-color-hover: var(--button-secondary-border-color);
   --button-secondary-text-color: var(--at-text);
   --button-secondary-text-color-hover: var(--button-secondary-text-color);
+  --button-cancel-background-fill: var(--at-red);
+  --button-cancel-background-fill-hover: var(--button-cancel-background-fill);
+  --button-cancel-border-color: var(--at-red);
+  --button-cancel-border-color-hover: var(--button-cancel-border-color);
+  --button-cancel-text-color: var(--at-base0);
+  --button-cancel-text-color-hover: var(--button-cancel-text-color);
+  /* Tables */
+  --table-border-color: var(--at-surface1);
+  --table-even-background-fill: var(--at-base1);
+  --table-odd-background-fill: var(--at-base2);
+  --table-row-focus: var(--color-accent-soft);
+
   /* Others */
   --shadow-spread: none;
   --chatbot-code-background-color: var(--background-fill-primary);
   --stat-background-fill: var(--at-surface1);
   --loader-color: var(--color-accent);
-  --slider-color: var(--at-accent);
+  --slider-color: var(--color-accent);
 
   /* Params */
   --neutral-900: var(--at-base1);
