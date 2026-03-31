@@ -6,11 +6,11 @@
 
 <div align="center">
     <h6>-> A1111/Forge <-</h6>
-    <img width="auto" height="auto" src="./preview/A1111.png"/>
+    <img width="auto" height="auto" src="./.github/A1111.png"/>
     <h6>-> ComfyUI <-</h6>
-    <img width="auto" height="auto" src="./preview/ComfyUI.png"/>
+    <img width="auto" height="auto" src="./.github/ComfyUI.png"/>
     <h6>-> SD-UX <-</h6>
-    <img width="auto" height="auto" src="./preview/SD-UX.png"/>
+    <img width="auto" height="auto" src="./.github/SD-UX.png"/>
 </div>
 
 <h1></h1>
