@@ -1,6 +1,4 @@
 onUiLoaded(function () {
-    if (opts.at_disable_theme) return;
-
     // Forge sliders
     document.querySelectorAll('input[type="range"]').forEach((el) => {
         el.className = el.className.replace(/\bsvelte-\S+/g, '').trim();

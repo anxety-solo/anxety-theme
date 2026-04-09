@@ -8,7 +8,7 @@
 /* Table Base */
 table {
   /* margin: 0 auto; */
-  width: auto;
+  width: fit-content;
   max-width: none;
   border-collapse: collapse;
   border-spacing: 0;
